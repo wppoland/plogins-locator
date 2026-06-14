@@ -1,0 +1,195 @@
+/* ==========================================================================
+   Locator — storefront directory
+   Accessible, theme-friendly, no layout shift. Uses CSS custom properties so
+   themes can re-skin without overriding every rule.
+   ========================================================================== */
+
+.locator {
+  --locator-gap: 1.25rem;
+  --locator-radius: 12px;
+  --locator-border: rgba(0, 0, 0, 0.1);
+  --locator-bg: #fff;
+  --locator-muted: #5b6470;
+  --locator-accent: #2563eb;
+  --locator-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  margin: 1.5rem 0;
+  color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  .locator {
+    --locator-border: rgba(255, 255, 255, 0.14);
+    --locator-bg: #1c1f24;
+    --locator-muted: #9aa4b2;
+    --locator-accent: #6ea8fe;
+    --locator-shadow: none;
+  }
+}
+
+/* ── Search ──────────────────────────────────────────────────────────── */
+
+.locator__search {
+  margin-bottom: var(--locator-gap);
+}
+
+.locator__search-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.locator__search-input {
+  width: 100%;
+  max-width: 28rem;
+  padding: 0.6rem 0.85rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  border: 1px solid var(--locator-border);
+  border-radius: var(--locator-radius);
+  background: var(--locator-bg);
+  color: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.locator__search-input:focus-visible {
+  outline: 2px solid var(--locator-accent);
+  outline-offset: 2px;
+  border-color: var(--locator-accent);
+}
+
+.locator__count {
+  margin: 0.5rem 0 0;
+  font-size: 0.875rem;
+  color: var(--locator-muted);
+}
+
+.locator__noresults {
+  margin: 0.5rem 0 0;
+  font-weight: 600;
+}
+
+.locator__empty {
+  color: var(--locator-muted);
+  font-style: italic;
+}
+
+/* ── List / grid ─────────────────────────────────────────────────────── */
+
+.locator__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--locator-gap);
+}
+
+.locator--grid .locator__list {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+}
+
+.locator__item {
+  margin: 0;
+}
+
+.locator__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--locator-border);
+  border-radius: var(--locator-radius);
+  background: var(--locator-bg);
+  box-shadow: var(--locator-shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+@media (hover: hover) {
+  .locator--grid .locator__card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .locator__card,
+  .locator__search-input {
+    transition: none;
+  }
+  .locator--grid .locator__card:hover {
+    transform: none;
+  }
+}
+
+.locator__thumb {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: calc(var(--locator-radius) - 4px);
+}
+
+.locator__name {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.locator__desc {
+  margin: 0;
+  color: var(--locator-muted);
+}
+
+.locator__address {
+  margin: 0;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.locator__hours {
+  font-size: 0.925rem;
+  line-height: 1.5;
+}
+
+.locator__hours-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.locator__contact {
+  list-style: none;
+  margin: auto 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  font-size: 0.925rem;
+}
+
+.locator__contact a {
+  color: var(--locator-accent);
+  text-decoration: none;
+}
+
+.locator__contact a:hover,
+.locator__contact a:focus-visible {
+  text-decoration: underline;
+}
+
+.locator__directions a {
+  font-weight: 600;
+}
+
+/* Screen-reader-only helper, mirrors WordPress core. */
+.locator .screen-reader-text {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

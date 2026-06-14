@@ -1,0 +1,259 @@
+# Copyright (C) 2026 WPPoland
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Locator - Store Locator for WooCommerce 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/locator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-06-14T20:50:29+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: locator\n"
+
+#. Plugin Name of the plugin
+#: locator.php
+msgid "Locator - Store Locator for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: locator.php
+msgid "https://plogins.com/locator/"
+msgstr ""
+
+#. Description of the plugin
+#: locator.php
+msgid "Show your physical store locations with a searchable list customers can filter by area."
+msgstr ""
+
+#. Author of the plugin
+#: locator.php
+msgid "WPPoland"
+msgstr ""
+
+#. Author URI of the plugin
+#: locator.php
+msgid "https://wppoland.com"
+msgstr ""
+
+#. translators: 1: Required PHP version, 2: Current PHP version
+#: locator.php:58
+#, php-format
+msgid "Locator requires PHP %1$s or higher. You are running PHP %2$s."
+msgstr ""
+
+#: locator.php:77
+msgid "Locator requires WooCommerce to be installed and activated."
+msgstr ""
+
+#: src/Admin/Settings.php:67
+msgid "Locator — Store Locator"
+msgstr ""
+
+#: src/Admin/Settings.php:68
+msgid "Store Locator"
+msgstr ""
+
+#: src/Admin/Settings.php:104
+msgid "Address"
+msgstr ""
+
+#: src/Admin/Settings.php:105
+#: src/PostType/StoreLocation.php:164
+#: templates/locator-list.php:117
+msgid "Opening hours"
+msgstr ""
+
+#: src/Admin/Settings.php:106
+#: src/PostType/StoreLocation.php:115
+#: src/PostType/StoreLocation.php:162
+msgid "Phone"
+msgstr ""
+
+#: src/Admin/Settings.php:107
+#: src/PostType/StoreLocation.php:163
+msgid "Email"
+msgstr ""
+
+#: src/Admin/Settings.php:108
+msgid "\"Get directions\" link"
+msgstr ""
+
+#: src/Admin/Settings.php:115
+msgid "Show customers where to find you"
+msgstr ""
+
+#: src/Admin/Settings.php:117
+msgid "Add your physical stores under WooCommerce → Store Locations, then place the shortcode below on any page to render a searchable, accessible directory your customers can filter by city, postcode or name."
+msgstr ""
+
+#. translators: %s: the [locator] shortcode wrapped in <code>.
+#: src/Admin/Settings.php:123
+#, php-format
+msgid "Add the %s shortcode to a page to display your locations."
+msgstr ""
+
+#: src/Admin/Settings.php:134
+msgid "Display"
+msgstr ""
+
+#: src/Admin/Settings.php:139
+msgid "Results layout"
+msgstr ""
+
+#: src/Admin/Settings.php:140
+msgid "Choose how locations are arranged. \"List\" stacks them in a single column; \"Grid\" flows them into responsive cards."
+msgstr ""
+
+#: src/Admin/Settings.php:145
+msgid "List (single column)"
+msgstr ""
+
+#: src/Admin/Settings.php:148
+msgid "Grid (responsive cards)"
+msgstr ""
+
+#: src/Admin/Settings.php:155
+msgid "Search box"
+msgstr ""
+
+#: src/Admin/Settings.php:156
+msgid "Show a text box above the results so visitors can instantly filter locations by city, postcode or name. Filtering happens in the browser — no data leaves the page."
+msgstr ""
+
+#: src/Admin/Settings.php:163
+msgid "Show the search box above the results."
+msgstr ""
+
+#: src/Admin/Settings.php:172
+msgid "Fields shown on each card"
+msgstr ""
+
+#: src/Admin/Settings.php:174
+msgid "The store name is always shown. Pick which extra details appear beneath it."
+msgstr ""
+
+#: src/Admin/Settings.php:179
+#: src/Admin/Settings.php:183
+msgid "Visible fields"
+msgstr ""
+
+#: src/Admin/Settings.php:216
+msgid "More information"
+msgstr ""
+
+#: src/PostType/StoreLocation.php:63
+#: src/PostType/StoreLocation.php:65
+#: src/PostType/StoreLocation.php:71
+msgid "Store Locations"
+msgstr ""
+
+#: src/PostType/StoreLocation.php:64
+msgid "Store Location"
+msgstr ""
+
+#: src/PostType/StoreLocation.php:66
+msgid "Add Location"
+msgstr ""
+
+#: src/PostType/StoreLocation.php:67
+msgid "Add Store Location"
+msgstr ""
+
+#: src/PostType/StoreLocation.php:68
+msgid "New Store Location"
+msgstr ""
+
+#: src/PostType/StoreLocation.php:69
+msgid "Edit Store Location"
+msgstr ""
+
+#: src/PostType/StoreLocation.php:70
+msgid "View Store Location"
+msgstr ""
+
+#: src/PostType/StoreLocation.php:72
+msgid "Search store locations"
+msgstr ""
+
+#: src/PostType/StoreLocation.php:73
+msgid "No store locations found."
+msgstr ""
+
+#: src/PostType/StoreLocation.php:74
+msgid "No store locations in Trash."
+msgstr ""
+
+#: src/PostType/StoreLocation.php:114
+#: src/PostType/StoreLocation.php:159
+msgid "City"
+msgstr ""
+
+#: src/PostType/StoreLocation.php:145
+msgid "Location details"
+msgstr ""
+
+#: src/PostType/StoreLocation.php:158
+msgid "Street address"
+msgstr ""
+
+#: src/PostType/StoreLocation.php:160
+msgid "Postcode / ZIP"
+msgstr ""
+
+#: src/PostType/StoreLocation.php:161
+msgid "Country"
+msgstr ""
+
+#: src/PostType/StoreLocation.php:165
+msgid "Latitude (optional)"
+msgstr ""
+
+#: src/PostType/StoreLocation.php:166
+msgid "Longitude (optional)"
+msgstr ""
+
+#: src/PostType/StoreLocation.php:185
+msgid "One line per day, e.g. \"Mon–Fri: 9:00–18:00\"."
+msgstr ""
+
+#: src/PostType/StoreLocation.php:195
+msgid "Decimal degrees. Used by the optional map add-on; the free list does not require it."
+msgstr ""
+
+#: src/Service/Locator.php:113
+msgid "No store locations have been added yet."
+msgstr ""
+
+#: templates/locator-list.php:45
+msgid "Find a store"
+msgstr ""
+
+#: templates/locator-list.php:53
+msgid "Search by city, postcode or name…"
+msgstr ""
+
+#. translators: %d: number of store locations.
+#: templates/locator-list.php:64
+#, php-format
+msgid "%d location"
+msgid_plural "%d locations"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/locator-list.php:70
+msgid "No locations match your search."
+msgstr ""
+
+#: templates/locator-list.php:143
+msgid "Get directions"
+msgstr ""
+
+#. translators: %s: store name.
+#: templates/locator-list.php:148
+#, php-format
+msgid "to %s (opens in a new tab)"
+msgstr ""
