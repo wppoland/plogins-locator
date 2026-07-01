@@ -74,6 +74,11 @@ The `[locator]` shortcode filters location cards client-side as the shopper type
 
 Yes. Add locations under **WooCommerce → Store Locations** and place `[locator]` on any page.
 
+
+= Does this plugin work on WordPress Multisite? =
+
+Yes. This plugin is compatible with WordPress Multisite. Network activate it or activate it on individual sites; each site keeps its own settings and data.
+
 == Screenshots ==
 
 1. The searchable storefront directory.
