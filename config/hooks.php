@@ -16,7 +16,6 @@ declare(strict_types=1);
 use Locator\Admin\Settings;
 use Locator\Admin\StoreListSearch;
 use Locator\PostType\StoreLocation;
-use Locator\Service\ElementorWidgets;
 use Locator\Service\Locator;
 
 defined('ABSPATH') || exit;
@@ -27,10 +26,8 @@ return is_admin()
         Settings::class,
         StoreListSearch::class,
         Locator::class,
-        ElementorWidgets::class,
     ]
     : [
         StoreLocation::class,
         Locator::class,
-        ElementorWidgets::class,
     ];

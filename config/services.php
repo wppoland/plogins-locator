@@ -15,7 +15,6 @@ use Locator\Container;
 use Locator\Migrator;
 use Locator\PostType\StoreLocation;
 use Locator\Repository\StoreRepository;
-use Locator\Service\ElementorWidgets;
 use Locator\Service\Locator;
 use Locator\Service\StoreWriter;
 use Locator\Util\TemplateLoader;
@@ -45,7 +44,4 @@ return static function (Container $c): void {
         $c->get(TemplateLoader::class),
         $c->get(Settings::class),
     ));
-
-    // Elementor integration (self-guards on the elementor/widgets/register hook).
-    $c->singleton(ElementorWidgets::class, static fn (): ElementorWidgets => new ElementorWidgets());
 };
