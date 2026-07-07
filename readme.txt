@@ -4,7 +4,7 @@ Tags: woocommerce, store locator, store finder, locations, shortcode
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 0.1.4
+Stable tag: 1.0.1
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -91,6 +91,9 @@ Locator does not connect to any external service. It registers no remote API, se
 Every location is stored on your own server as a `locator_store` post, with its address, city, postcode, country, phone, opening hours, email and any latitude/longitude kept in that post's meta. Settings live in the `locator_settings` option. Coordinates are typed in by hand on the location screen - nothing is geocoded against an outside provider. The storefront search filters cards in the visitor's browser, so no request is made while typing, and the plugin sends no email.
 
 == Changelog ==
+
+= 1.0.1 =
+* First stable release.
 
 = 0.1.4 =
 * Renamed to Plogins Locator for WooCommerce for a more distinctive plugin name.
