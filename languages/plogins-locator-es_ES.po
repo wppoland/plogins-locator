@@ -1,30 +1,30 @@
-# Copyright (C) 2026 WPPoland
+# Copyright (C) 2026 WPPoland.com
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Locator - Store Locator for WooCommerce 0.1.0\n"
+"Project-Id-Version: Locator - Store Locator for WooCommerce 0.1.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/locator\n"
 "POT-Creation-Date: 2026-06-20T04:59:35+00:00\n"
-"PO-Revision-Date: 2026-06-15 00:00+0000\n"
-"Last-Translator: WPPoland <hello@plogins.com>\n"
-"Language-Team: WPPoland <hello@plogins.com>\n"
-"Language: pl_PL\n"
+"PO-Revision-Date: 2026-06-20T04:59:35+00:00\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: plogins-locator\n"
-"X-Generator: WP-CLI 2.12.0\n"
+"X-Generator: WP-CLI 2.11.0\n"
 
 #. Plugin Name of the plugin
 #: locator.php
 msgid "Locator - Store Locator for WooCommerce"
-msgstr "Locator - Wyszukiwarka sklepów dla WooCommerce"
+msgstr "Localizador - Localizador de tiendas para WooCommerce"
 
 #. Plugin URI of the plugin
 #: locator.php
 msgid "https://plogins.com/locator/"
-msgstr "https://plogins.com/locator/"
+msgstr "https://plogins.com/es/locator/"
 
 #. Description of the plugin
 #: locator.php
@@ -32,8 +32,8 @@ msgid ""
 "Show your physical store locations with a searchable list customers can "
 "filter by area."
 msgstr ""
-"Pokaż lokalizacje swoich sklepów stacjonarnych na przeszukiwalnej liście, "
-"którą klienci mogą filtrować według obszaru."
+"Muestre las ubicaciones de sus tiendas físicas con una lista de búsqueda que"
+" los clientes pueden filtrar por área."
 
 #. Author of the plugin
 #: locator.php
@@ -48,54 +48,57 @@ msgstr "https://wppoland.com"
 #. translators: 1: Required PHP version, 2: Current PHP version
 #: locator.php:57
 msgid "Locator requires PHP %1$s or higher. You are running PHP %2$s."
-msgstr "Wtyczka Locator wymaga PHP %1$s lub nowszego. Używasz PHP %2$s."
+msgstr ""
+"El localizador requiere PHP %1$s o superior. Estás ejecutando PHP %2$s."
 
 #: locator.php:76
 msgid "Locator requires WooCommerce to be installed and activated."
-msgstr "Wtyczka Locator wymaga zainstalowanej i aktywnej wtyczki WooCommerce."
+msgstr "Locator requiere que WooCommerce esté instalado y activado."
 
 #: src/Admin/Settings.php:62
 msgid "Locator: Store Locator"
-msgstr "Locator: Wyszukiwarka sklepów"
+msgstr "Localizador: Localizador de tiendas"
 
 #: src/Admin/Settings.php:63
 msgid "Store Locator"
-msgstr "Wyszukiwarka sklepów"
+msgstr "Localizador de tiendas"
 
 #: src/Admin/Settings.php:99
 msgid "Address"
-msgstr "Adres"
+msgstr "Dirección"
 
 #: src/Admin/Settings.php:100
 msgid "Adds the street, postcode, city and country block to each card."
-msgstr "Dodaje do każdej karty ulicę, kod pocztowy, miasto i blok kraju."
+msgstr ""
+"Añade la calle, el código postal, la ciudad y el bloque del país a cada "
+"tarjeta."
 
 #: src/Admin/Settings.php:103 src/PostType/StoreLocation.php:172
 #: templates/partials/locator-store-item.php:49
 msgid "Opening hours"
-msgstr "Godziny otwarcia"
+msgstr "Horario de apertura"
 
 #: src/Admin/Settings.php:104
 msgid ""
 "Shows the hours you entered for the store, so customers know when to visit."
 msgstr ""
-"Pokazuje wprowadzone godziny otwarcia sklepu, dzięki czemu klienci wiedzą, "
-"kiedy odwiedzić sklep."
+"Muestra el horario que ingresaste para la tienda, para que los clientes "
+"sepan cuándo visitarla."
 
 #: src/Admin/Settings.php:107 src/PostType/StoreLocation.php:121
 #: src/PostType/StoreLocation.php:168
 msgid "Phone"
-msgstr "Telefon"
+msgstr "Teléfono"
 
 #: src/Admin/Settings.php:108
 msgid "Shows a click-to-call number, tapping it dials the store on mobile."
 msgstr ""
-"Pokazuje numer „kliknij, aby połączyć”, jego dotknięcie powoduje wybranie "
-"numeru sklepu na urządzeniu mobilnym."
+"Muestra un número de clic para llamar; al tocarlo, se marca la tienda en el "
+"móvil."
 
 #: src/Admin/Settings.php:116
 msgid "Show customers where to find you"
-msgstr "Pokaż klientom, gdzie Cię znaleźć"
+msgstr "Muestra a los clientes dónde encontrarte"
 
 #: src/Admin/Settings.php:118
 msgid ""
@@ -103,31 +106,32 @@ msgid ""
 " shortcode below on any page to render a searchable, accessible directory "
 "your customers can filter by city, postcode or name."
 msgstr ""
-"Dodaj swoje sklepy stacjonarne w WooCommerce → Lokalizacje sklepów, a "
-"następnie umieść poniższy shortcode na dowolnej stronie, aby wyświetlić "
-"przeszukiwalny, dostępny katalog, który klienci mogą filtrować według "
-"miasta, kodu pocztowego lub nazwy."
+"Añade sus tiendas físicas en WooCommerce → Ubicaciones de tiendas, luego "
+"coloque el código corto a continuación en cualquier página para generar un "
+"directorio accesible y con capacidad de búsqueda que sus clientes puedan "
+"filtrar por ciudad, código postal o nombre."
 
 #. translators: %s: the [locator] shortcode wrapped in <code>.
 #: src/Admin/Settings.php:124
 msgid "Add the %s shortcode to a page to display your locations."
-msgstr "Dodaj shortcode %s do strony, aby wyświetlić swoje lokalizacje."
+msgstr "Añade el código corto %s a una página para mostrar sus ubicaciones."
 
 #: src/Admin/Settings.php:135
 msgid "Search"
-msgstr "Szukaj"
+msgstr "Buscar"
 
 #: src/Admin/Settings.php:137
 msgid "Help customers narrow a long list to the store nearest them."
-msgstr "Pomóż klientom zawęzić długą listę do najbliższego sklepu."
+msgstr ""
+"Ayude a los clientes a reducir una lista larga a la tienda más cercana."
 
 #: src/Admin/Settings.php:142
 msgid "Search box"
-msgstr "Pole wyszukiwania"
+msgstr "Cuadro de búsqueda"
 
 #: src/Admin/Settings.php:148
 msgid "Show the search box above the results."
-msgstr "Pokaż pole wyszukiwania nad wynikami."
+msgstr "Muestra el cuadro de búsqueda encima de los resultados."
 
 #: src/Admin/Settings.php:151
 msgid ""
@@ -135,30 +139,30 @@ msgid ""
 " happens in the browser, so no data leaves the page. Leave off if you only "
 "list a handful of stores."
 msgstr ""
-"Odwiedzający filtrują lokalizacje podczas wpisywania według miasta, kodu "
-"pocztowego lub nazwy. Filtrowanie odbywa się w przeglądarce, więc żadne dane"
-" nie opuszczają strony. Jeśli podajesz tylko kilka sklepów, pomiń tę opcję."
+"Los visitantes filtran ubicaciones a medida que escriben, por ciudad, código"
+" postal o nombre. El filtrado se realiza en el navegador, por lo que ningún "
+"dato sale de la página. Déjelo si solo incluye un puñado de tiendas."
 
 #: src/Admin/Settings.php:160
 msgid "Fields shown on each card"
-msgstr "Pola wyświetlane na każdej karcie"
+msgstr "Campos mostrados en cada tarjeta"
 
 #: src/Admin/Settings.php:162
 msgid ""
 "The store name is always shown. Choose which extra details appear beneath "
 "it, each one is only rendered when that store actually has a value."
 msgstr ""
-"Nazwa sklepu jest zawsze wyświetlana. Wybierz, które dodatkowe szczegóły "
-"pojawią się pod nim. Każdy z nich będzie renderowany tylko wtedy, gdy dany "
-"sklep rzeczywiście ma wartość."
+"El nombre de la tienda siempre se muestra. Elija qué detalles adicionales "
+"aparecen debajo, cada uno solo se representa cuando esa tienda realmente "
+"tiene un valor."
 
 #: src/Admin/Settings.php:167 src/Admin/Settings.php:171
 msgid "Visible fields"
-msgstr "Widoczne pola"
+msgstr "Campos visibles"
 
 #: src/Admin/Settings.php:195
 msgid "Example card"
-msgstr "Przykładowa karta"
+msgstr "tarjeta de ejemplo"
 
 #: src/Admin/Settings.php:203
 msgid "Riverside Store"
@@ -170,7 +174,7 @@ msgstr "12 Mill Lane, EC1A 1BB London"
 
 #: src/Admin/Settings.php:208
 msgid "Mon–Sat 9:00–18:00"
-msgstr "pon.–sob. 9:00–18:00"
+msgstr "Lunes a sábado de 9:00 a 18:00"
 
 #: src/Admin/Settings.php:211
 msgid "+44 20 7946 0000"
@@ -180,134 +184,113 @@ msgstr "+44 20 7946 0000"
 msgid ""
 "A live page also adds your search box and shows every store that matches."
 msgstr ""
-"Aktywna strona dodaje również pole wyszukiwania i wyświetla każdy pasujący "
-"sklep."
+"Una página en vivo también añade su cuadro de búsqueda y muestra todas las "
+"tiendas que coinciden."
 
 #: src/PostType/StoreLocation.php:69 src/PostType/StoreLocation.php:71
 #: src/PostType/StoreLocation.php:77
 msgid "Store Locations"
-msgstr "Lokalizacje sklepów"
+msgstr "Ubicaciones de las tiendas"
 
 #: src/PostType/StoreLocation.php:70
 msgid "Store Location"
-msgstr "Lokalizacja sklepu"
+msgstr "Ubicación de la tienda"
 
 #: src/PostType/StoreLocation.php:72
 msgid "Add Location"
-msgstr "Dodaj lokalizację"
+msgstr "Añadir ubicación"
 
 #: src/PostType/StoreLocation.php:73
 msgid "Add Store Location"
-msgstr "Dodaj lokalizację sklepu"
+msgstr "Añadir ubicación de tienda"
 
 #: src/PostType/StoreLocation.php:74
 msgid "New Store Location"
-msgstr "Nowa lokalizacja sklepu"
+msgstr "Nueva ubicación de la tienda"
 
 #: src/PostType/StoreLocation.php:75
 msgid "Edit Store Location"
-msgstr "Edytuj lokalizację sklepu"
+msgstr "Editar ubicación de la tienda"
 
 #: src/PostType/StoreLocation.php:76
 msgid "View Store Location"
-msgstr "Zobacz lokalizację sklepu"
+msgstr "Ver ubicación de la tienda"
 
 #: src/PostType/StoreLocation.php:78
 msgid "Search store locations"
-msgstr "Szukaj lokalizacji sklepów"
+msgstr "Buscar ubicaciones de tiendas"
 
 #: src/PostType/StoreLocation.php:79
 msgid "No store locations found."
-msgstr "Nie znaleziono żadnych lokalizacji sklepów."
+msgstr "No se encontraron ubicaciones de tiendas."
 
 #: src/PostType/StoreLocation.php:80
 msgid "No store locations in Trash."
-msgstr "Brak lokalizacji sklepów w koszu."
+msgstr "No hay ubicaciones de tiendas en la Papelera."
 
 #: src/PostType/StoreLocation.php:120 src/PostType/StoreLocation.php:165
 msgid "City"
-msgstr "Miasto"
+msgstr "ciudad"
 
 #: src/PostType/StoreLocation.php:151
 msgid "Location details"
-msgstr "Szczegóły lokalizacji"
+msgstr "Detalles de la ubicación"
 
 #: src/PostType/StoreLocation.php:164
 msgid "Street address"
-msgstr "Adres (ulica)"
+msgstr "dirección postal"
 
 #: src/PostType/StoreLocation.php:166
 msgid "Postcode / ZIP"
-msgstr "Kod pocztowy"
+msgstr "Código postal/ZIP"
 
 #: src/PostType/StoreLocation.php:167
 msgid "Country"
-msgstr "Kraj"
+msgstr "País"
 
 #: src/PostType/StoreLocation.php:169
 msgid "Email"
-msgstr "E-mail"
+msgstr "Correo electrónico"
 
 #: src/PostType/StoreLocation.php:170
 msgid "Latitude"
-msgstr "Szerokość geograficzna"
+msgstr "Latitud"
 
 #: src/PostType/StoreLocation.php:171
 msgid "Longitude"
-msgstr "Długość geograficzna"
+msgstr "Longitud"
 
 #: src/PostType/StoreLocation.php:191
 msgid "One line per day, e.g. \"Mon–Fri: 9:00–18:00\"."
-msgstr "Jeden wiersz na dzień, np. „Pon–Pt: 9:00–18:00”."
+msgstr "Una línea por día, p.e. \"De lunes a viernes: de 9:00 a 18:00\"."
 
 #: src/PostType/StoreLocation.php:201
 msgid ""
 "Optional. Enter latitude and longitude as decimal degrees (e.g. 52.2297, "
 "21.0122) to place this location on a map."
 msgstr ""
-"Fakultatywny. Wprowadź szerokość i długość geograficzną w stopniach "
-"dziesiętnych (np. 52,2297, 21,0122), aby umieścić tę lokalizację na mapie."
+"Opcional. Ingrese la latitud y la longitud como grados decimales (por "
+"ejemplo, 52.2297, 21.0122) para colocar esta ubicación en un mapa."
 
 #: src/Service/Locator.php:146
 msgid "No store locations have been added yet."
-msgstr "Nie dodano jeszcze żadnych lokalizacji sklepów."
+msgstr "Aún no se han agregado ubicaciones de tiendas."
 
 #: templates/locator-list.php:43
 msgid "Find a store"
-msgstr "Znajdź sklep"
+msgstr "encontrar una tienda"
 
 #: templates/locator-list.php:51
 msgid "Search by city, postcode or name…"
-msgstr "Szukaj według miasta, kodu pocztowego lub nazwy…"
+msgstr "Busca por ciudad, código postal o nombre…"
 
 #. translators: %d: number of store locations.
 #: templates/locator-list.php:62
 msgid "%d location"
 msgid_plural "%d locations"
-msgstr[0] "%d lokalizacja"
-msgstr[1] "%d lokalizacje"
-msgstr[2] "%d lokalizacji"
+msgstr[0] "%d ubicación"
+msgstr[1] "%d ubicaciones"
 
 #: templates/locator-list.php:68
 msgid "No locations match your search."
-msgstr "Żadna lokalizacja nie pasuje do Twojego wyszukiwania."
-
-#~ msgid "WPPoland"
-#~ msgstr "WPPoland"
-
-#~ msgid "Display"
-#~ msgstr "Wyświetlanie"
-
-#~ msgid ""
-#~ "Visitors can instantly filter locations by city, postcode or name. Filtering"
-#~ " happens in the browser — no data leaves the page."
-#~ msgstr ""
-#~ "Odwiedzający mogą natychmiast filtrować lokalizacje według miasta, kodu "
-#~ "pocztowego lub nazwy. Filtrowanie odbywa się w przeglądarce — żadne dane nie"
-#~ " opuszczają strony."
-
-#~ msgid ""
-#~ "The store name is always shown. Pick which extra details appear beneath it."
-#~ msgstr ""
-#~ "Nazwa sklepu jest zawsze widoczna. Wybierz, które dodatkowe informacje mają "
-#~ "pojawić się pod nią."
+msgstr "Ninguna ubicación coincide con su búsqueda."
