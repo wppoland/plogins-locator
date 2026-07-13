@@ -137,26 +137,3 @@
 .locator-admin .locator-preview__note {
   margin: 0.6rem 0 0;
 }
-
-@media (prefers-color-scheme: dark) {
-  .locator-admin {
-    /* #45c4b0 on #1e1e1e = 8.0:1 text / clears AA; mirrors storefront dark accent. */
-    --locator-admin-accent: #45c4b0;
-    --locator-admin-accent-soft: rgba(69, 196, 176, 0.14);
-    --locator-admin-border: #3c3c3c;
-    --locator-admin-surface: #1e1e1e;
-    --locator-admin-muted: #b5b5b5;
-  }
-
-  .locator-admin .locator-intro,
-  .locator-admin .locator-card {
-    color: #e0e0e0;
-  }
-
-  .locator-admin .locator-intro code,
-  .locator-admin .locator-card code,
-  .locator-admin .locator-shortcode-hint code {
-    background: #2a2a2a;
-    color: #e0e0e0;
-  }
-}
