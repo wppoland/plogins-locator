@@ -1,4 +1,4 @@
-=== Plogins Locator - Store Locator for WooCommerce ===
+=== Locator - Store Locator for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, store locator, store finder, locations, shortcode
 Requires at least: 6.5
