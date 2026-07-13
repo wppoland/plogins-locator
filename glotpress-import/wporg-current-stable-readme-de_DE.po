@@ -8,29 +8,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: plogins-i18n\n"
 
-msgid "Requires Plugins: woocommerce"
-msgstr "Erfordert Plugins: woocommerce"
-
 msgid "Show your physical store locations with a searchable, accessible list customers can filter by city, postcode or name."
 msgstr "Zeige die Standorte deiner physischen Filialen mit einer durchsuchbaren, zugänglichen Liste an, die Kunden nach Stadt, Postleitzahl oder Name filtern können."
 
 msgid "Locator lists your physical shops on the storefront. You enter each location once\nin wp-admin (name, address, city, postcode, country, phone and opening hours), then\nadd the `[locator]` shortcode to any page to print a searchable directory."
-msgstr "Locator listet deine physischen Geschäfte im Schaufenster auf. Sie geben jeden Standort einmal ein\nin wp-admin (Name, Adresse, Stadt, Postleitzahl, Land, Telefon und Öffnungszeiten), dann\nFüge den Shortcode „[locator]“ zu einer beliebigen Seite hinzu, um ein durchsuchbares Verzeichnis zu drucken."
+msgstr "Locator listet deine physischen Geschäfte im Shop auf. Du gibst jeden Standort einmal ein\nin wp-admin (Name, Adresse, Stadt, Postleitzahl, Land, Telefon und Öffnungszeiten), dann\nfügst du den Shortcode `[locator]` zu einer beliebigen Seite hinzu, um ein durchsuchbares Verzeichnis auszugeben."
 
 msgid "There is no map and no external service. No Google Maps key, no API call, no\ntracking script. Every location is printed in the page HTML, so the directory is\nvisible even with JavaScript turned off. When JavaScript runs, the search box hides\nand shows cards as the visitor types, filtering by city, postcode or store name\nentirely in the browser."
-msgstr "Es gibt keine Karte und keinen externen Service. Kein Google Maps-Schlüssel, kein API-Aufruf, nein\nTracking-Skript. Jeder Standort wird im HTML der Seite gedruckt, ebenso das Verzeichnis\nauch bei deaktiviertem JavaScript sichtbar. Wenn JavaScript ausgeführt wird, wird das Suchfeld ausgeblendet\nund zeigt Karten je nach Besuchertyp an, gefiltert nach Stadt, Postleitzahl oder Geschäftsname\nkomplett im Browser."
+msgstr "Es gibt keine Karte und keinen externen Dienst. Keinen Google-Maps-Schlüssel, keinen API-Aufruf, kein\nTracking-Skript. Jeder Standort wird im HTML der Seite ausgegeben, sodass das Verzeichnis\nauch bei deaktiviertem JavaScript sichtbar ist. Wenn JavaScript läuft, blendet das Suchfeld\nKarten ein und aus, während der Besucher tippt, und filtert nach Stadt, Postleitzahl oder Geschäftsname\nkomplett im Browser."
 
 msgid "Source and issues: https://github.com/wppoland/plogins-locator"
-msgstr "Quelle und Probleme: https://github.com/wppoland/plogins-locator"
+msgstr "Quellcode und Fehlerberichte: https://github.com/wppoland/plogins-locator"
 
 msgid "<strong>Features</strong>"
 msgstr "<strong>Funktionen</strong>"
 
 msgid "* Store Locations live as their own post type under the WooCommerce menu.\n* Each location keeps its address, city, postcode, country, phone and opening hours.\n* The `[locator]` shortcode renders the directory; you can leave the search box off if you only have a couple of shops.\n* Search runs client-side over name, address, city, postcode and country. No request is sent while typing.\n* Per-card display toggles for address, opening hours and phone (the store name always shows).\n* The result count is announced through an ARIA live region, the search field is keyboard-operable, and cards use focus-visible outlines.\n* Stylesheet and script load only on pages where the shortcode actually rendered, and the markup avoids layout shift.\n* Storefront styles follow the visitor's light/dark preference and honour prefers-reduced-motion."
-msgstr "* Store-Standorte sind als eigener Beitragstyp im WooCommerce-Menü verfügbar.\n* Jeder Standort behält seine Adresse, Stadt, Postleitzahl, Land, Telefonnummer und Öffnungszeiten.\n* Der Shortcode „[locator]“ rendert das Verzeichnis; Du kannst das Suchfeld auslassen, wenn du nur wenige Geschäfte haben.\n* Die Suche erfolgt clientseitig über Name, Adresse, Stadt, Postleitzahl und Land. Während der Eingabe wird keine Anfrage gesendet.\n* Die Anzeige pro Karte schaltet zwischen Adresse, Öffnungszeiten und Telefonnummer um (der Geschäftsname wird immer angezeigt).\n* Die Ergebnisanzahl wird über eine ARIA-Live-Region bekannt gegeben, das Suchfeld ist über die Tastatur bedienbar und die Karten verwenden im Fokus sichtbare Umrisse.\n* Stylesheet und Skript werden nur auf Seiten geladen, auf denen der Shortcode tatsächlich gerendert wurde, und das Markup vermeidet Layoutverschiebungen.\n* Die Schaufensterstile orientieren sich an der Hell/Dunkel-Vorliebe des Besuchers und berücksichtigen die bevorzugte Bewegungsfreiheit."
+msgstr "* Store-Standorte sind als eigener Beitragstyp im WooCommerce-Menü verfügbar.\n* Jeder Standort behält seine Adresse, Stadt, Postleitzahl, Land, Telefonnummer und Öffnungszeiten.\n* Der Shortcode `[locator]` rendert das Verzeichnis; du kannst das Suchfeld auslassen, wenn du nur wenige Geschäfte hast.\n* Die Suche erfolgt clientseitig über Name, Adresse, Stadt, Postleitzahl und Land. Während der Eingabe wird keine Anfrage gesendet.\n* Die Anzeige pro Karte schaltet zwischen Adresse, Öffnungszeiten und Telefonnummer um (der Geschäftsname wird immer angezeigt).\n* Die Ergebnisanzahl wird über eine ARIA-Live-Region bekannt gegeben, das Suchfeld ist über die Tastatur bedienbar und die Karten verwenden im Fokus sichtbare Umrisse.\n* Stylesheet und Skript werden nur auf Seiten geladen, auf denen der Shortcode tatsächlich gerendert wurde, und das Markup vermeidet Layoutverschiebungen.\n* Die Shop-Stile orientieren sich an der Hell-/Dunkel-Vorliebe des Besuchers und berücksichtigen die Einstellung für reduzierte Bewegung (prefers-reduced-motion)."
 
 msgid "1. Upload the plugin to `/wp-content/plugins/locator`, or install via Plugins → Add New.\n2. Activate it. WooCommerce must be active.\n3. Go to WooCommerce → Store Locations and add your stores.\n4. Configure WooCommerce → Store Locator (search box and visible fields).\n5. Add the `[locator]` shortcode to any page."
-msgstr "1. Lade das Plugin nach „/wp-content/plugins/locator“ hoch oder installiere es über Plugins → Neu hinzufügen.\n2. Aktiviere es. WooCommerce muss aktiv sein.\n3. Gehe zu WooCommerce → Store-Standorte und füge deine Shops hinzu.\n4. Konfiguriere WooCommerce → Store Locator (Suchfeld und sichtbare Felder).\n5. Füge den Shortcode „[locator]“ zu einer beliebigen Seite hinzu."
+msgstr "1. Lade das Plugin nach `/wp-content/plugins/locator` hoch oder installiere es über Plugins → Neu hinzufügen.\n2. Aktiviere es. WooCommerce muss aktiv sein.\n3. Gehe zu WooCommerce → Store-Standorte und füge deine Shops hinzu.\n4. Konfiguriere WooCommerce → Store Locator (Suchfeld und sichtbare Felder).\n5. Füge den Shortcode `[locator]` zu einer beliebigen Seite hinzu."
 
 msgid "* <strong>Documentation</strong> - https://plogins.com/plogins-locator/docs/\n* <strong>Plugin page</strong> - https://plogins.com/plogins-locator/\n* <strong>Source code</strong> - https://github.com/wppoland/plogins-locator\n* <strong>Bug reports and feature requests</strong> - https://github.com/wppoland/plogins-locator/issues"
 msgstr "* <strong>Dokumentation</strong> - https://plogins.com/de/plogins-locator/docs/\n* <strong>Plugin-Seite</strong> - https://plogins.com/de/plogins-locator/\n* <strong>Quellcode</strong> – https://github.com/wppoland/plogins-locator\n* <strong>Fehlerberichte und Funktionsanfragen</strong> – https://github.com/wppoland/plogins-locator/issues"
@@ -45,38 +42,44 @@ msgid "The store name is always shown. You can toggle address, opening hours and
 msgstr "Der Shopname wird immer angezeigt. In den Einstellungen kannst du Adresse, Öffnungszeiten und Telefon umschalten."
 
 msgid "The `[locator]` shortcode filters location cards client-side as the shopper types."
-msgstr "Der Shortcode „[locator]“ filtert Standortkarten clientseitig, während der Käufer sie eingibt."
+msgstr "Der Shortcode `[locator]` filtert Standortkarten clientseitig, während der Käufer tippt."
 
 msgid "Yes. Add locations under <strong>WooCommerce → Store Locations</strong> and place `[locator]` on any page."
-msgstr "Ja. Füge Standorte unter <strong>WooCommerce → Store-Standorte</strong> hinzu und platziere „[locator]“ auf einer beliebigen Seite."
+msgstr "Ja. Füge Standorte unter <strong>WooCommerce → Store-Standorte</strong> hinzu und platziere `[locator]` auf einer beliebigen Seite."
 
 msgid "Yes. This plugin is compatible with WordPress Multisite. Network activate it or activate it on individual sites; each site keeps its own settings and data."
 msgstr "Ja. Dieses Plugin ist mit WordPress Multisite kompatibel. Aktiviere es im Netzwerk oder auf einzelnen Websites. Jede Site behält ihre eigenen Einstellungen und Daten."
 
 msgid "1. The searchable storefront directory.\n2. The Store Locator settings page."
-msgstr "1. Das durchsuchbare Storefront-Verzeichnis.\n2. Die Seite mit den Store Locator-Einstellungen."
+msgstr "1. Das durchsuchbare Shop-Verzeichnis.\n2. Die Seite mit den Store Locator-Einstellungen."
 
 msgid "Locator does not connect to any external service. It registers no remote API, sends no HTTP request, and loads no third-party script, font, map or tile. Your store data never leaves your site."
-msgstr "Der Locator stellt keine Verbindung zu einem externen Dienst her. Es registriert keine Remote-API, sendet keine HTTP-Anfrage und lädt keine Skripte, Schriftarten, Karten oder Kacheln von Drittanbietern. deine Shop-Daten verlassen niemals deine Website."
+msgstr "Locator stellt keine Verbindung zu einem externen Dienst her. Es registriert keine Remote-API, sendet keine HTTP-Anfrage und lädt keine Skripte, Schriftarten, Karten oder Kacheln von Drittanbietern. Deine Shop-Daten verlassen niemals deine Website."
 
 msgid "Every location is stored on your own server as a `locator_store` post, with its address, city, postcode, country, phone, opening hours, email and any latitude/longitude kept in that post's meta. Settings live in the `locator_settings` option. Coordinates are typed in by hand on the location screen - nothing is geocoded against an outside provider. The storefront search filters cards in the visitor's browser, so no request is made while typing, and the plugin sends no email."
-msgstr "Jeder Standort wird auf deinem eigenen Server als „locator_store“-Beitrag gespeichert, wobei Adresse, Stadt, Postleitzahl, Land, Telefonnummer, Öffnungszeiten, E-Mail-Adresse und etwaige Breiten-/Längengrade im Meta dieses Beitrags enthalten sind. Die Einstellungen befinden sich in der Option „locator_settings“. Die Koordinaten werden manuell auf dem Standortbildschirm eingegeben – es erfolgt keine Geokodierung gegenüber einem externen Anbieter. Die Storefront-Suche filtert Karten im Browser des Besuchers, sodass beim Tippen keine Anfrage erfolgt und das Plugin keine E-Mail sendet."
+msgstr "Jeder Standort wird auf deinem eigenen Server als `locator_store`-Beitrag gespeichert, wobei Adresse, Stadt, Postleitzahl, Land, Telefonnummer, Öffnungszeiten, E-Mail-Adresse und etwaige Breiten-/Längengrade im Meta dieses Beitrags enthalten sind. Die Einstellungen befinden sich in der Option `locator_settings`. Die Koordinaten werden manuell auf dem Standortbildschirm eingegeben – es erfolgt keine Geokodierung gegenüber einem externen Anbieter. Die Shop-Suche filtert Karten im Browser des Besuchers, sodass beim Tippen keine Anfrage erfolgt und das Plugin keine E-Mail sendet."
+
+msgid "Plogins Locator includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-locator`, so WordPress.org language packs can also override or extend these bundled translations."
+msgstr "Plogins Locator enthält polnische, deutsche und spanische Übersetzungen für die Plugin-Schnittstelle. Die Textdomain ist `plogins-locator`, sodass WordPress.org-Sprachpakete diese gebündelten Übersetzungen auch überschreiben oder erweitern können."
+
+msgid "* Added bundled Polish, German and Spanish translations for the plugin interface."
+msgstr "* Gebündelte polnische, deutsche und spanische Übersetzungen für die Plugin-Schnittstelle hinzugefügt."
 
 msgid "* First stable release."
 msgstr "* Erste stabile Version."
 
 msgid "* Renamed to Plogins Locator for WooCommerce for a more distinctive plugin name."
-msgstr "* Für einen eindeutigeren Plugin-Namen in Plogins Locator für WooCommerce umbenannt."
+msgstr "* Für einen unverwechselbareren Plugin-Namen in Plogins Locator for WooCommerce umbenannt."
 
 msgid "* Fix: store locations no longer take over the `manage_woocommerce` capability. Registering the locations post type mapped meta caps onto `manage_woocommerce`, which made every `manage_woocommerce` check fail while the plugin was active, hiding the whole WooCommerce admin menu (Settings, Status, Orders) and the plugin's own settings page."
-msgstr "* Fix: Filialstandorte übernehmen nicht mehr die Funktion „manage_woocommerce“. Durch die Registrierung des Standortbeitrags wurden Meta-Caps auf „manage_woocommerce“ zugeordnet, was dazu führte, dass jede „manage_woocommerce“-Prüfung fehlschlug, während das Plugin aktiv war, wodurch das gesamte WooCommerce-Administratormenü (Einstellungen, Status, Bestellungen) und die eigene Einstellungsseite des Plugins ausgeblendet wurden."
+msgstr "* Fix: Filialstandorte übernehmen nicht mehr die Berechtigung `manage_woocommerce`. Durch die Registrierung des Standortbeitrags wurden Meta-Capabilities auf `manage_woocommerce` zugeordnet, was dazu führte, dass jede `manage_woocommerce`-Prüfung fehlschlug, während das Plugin aktiv war, wodurch das gesamte WooCommerce-Menü im Adminbereich (Einstellungen, Status, Bestellungen) und die eigene Einstellungsseite des Plugins ausgeblendet wurden."
 
 msgid "* Programmatic store import via `StoreWriter` with `locator/import_store_fields` filter and `locator/store_imported` action."
-msgstr "* Programmatischer Store-Import über „StoreWriter“ mit „locator/import_store_fields“-Filter und „locator/store_imported“-Aktion."
+msgstr "* Programmatischer Store-Import über `StoreWriter` mit dem Filter `locator/import_store_fields` und der Aktion `locator/store_imported`."
 
 msgid "* Add `locator/store_groups` filter so add-ons can group the storefront directory by region or country."
-msgstr "* Füge den Filter „locator/store_groups“ hinzu, damit Add-ons das Storefront-Verzeichnis nach Region oder Land gruppieren können."
+msgstr "* Filter `locator/store_groups` hinzugefügt, damit Add-ons das Shop-Verzeichnis nach Region oder Land gruppieren können."
 
 msgid "* Initial release: store-location post type, [locator] shortcode, searchable list, settings."
-msgstr "* Erstveröffentlichung: Beitragstyp „Store-Location“, [locator]-Shortcode, durchsuchbare Liste, Einstellungen."
+msgstr "* Erstveröffentlichung: Beitragstyp für Store-Standorte, [locator]-Shortcode, durchsuchbare Liste, Einstellungen."
 

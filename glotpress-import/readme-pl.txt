@@ -4,8 +4,8 @@ Tags: woocommerce, store locator, store finder, locations, shortcode
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.0.1
-Wymaga wtyczek: woocommerce
+Stable tag: 1.0.2
+Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,28 +13,28 @@ Pokaż lokalizacje swoich sklepów stacjonarnych za pomocą łatwej do przeszuki
 
 == Description ==
 
-Locator wyświetla listę Twoich sklepów fizycznych w witrynie sklepowej. Do każdej lokalizacji wchodzisz raz
-w wp-admin (nazwa, adres, miasto, kod pocztowy, kraj, telefon i godziny otwarcia), następnie
-dodaj krótki kod `[locator]` do dowolnej strony, aby wydrukować katalog z możliwością przeszukiwania.
+Locator wyświetla listę Twoich sklepów stacjonarnych w sklepie. Każdą lokalizację wprowadzasz raz
+w wp-admin (nazwa, adres, miasto, kod pocztowy, kraj, telefon i godziny otwarcia), a następnie
+dodajesz shortcode `[locator]` do dowolnej strony, aby wyświetlić katalog z możliwością przeszukiwania.
 
-Nie ma mapy ani usługi zewnętrznej. Żadnego klucza Google Maps, żadnego wywołania API, nie
-skrypt śledzący. Każda lokalizacja jest drukowana na stronie HTML, więc katalog też
-widoczne nawet po wyłączeniu JavaScript. Po uruchomieniu JavaScript pole wyszukiwania zostaje ukryte
-i pokazuje karty w zależności od typu odwiedzającego, filtrując według miasta, kodu pocztowego lub nazwy sklepu
+Nie ma mapy ani usługi zewnętrznej. Żadnego klucza Google Maps, żadnego wywołania API, żadnego
+skryptu śledzącego. Każda lokalizacja jest umieszczana w kodzie HTML strony, więc katalog jest
+widoczny nawet po wyłączeniu JavaScript. Gdy JavaScript działa, pole wyszukiwania ukrywa
+i pokazuje karty w miarę pisania przez odwiedzającego, filtrując według miasta, kodu pocztowego lub nazwy sklepu
 całkowicie w przeglądarce.
 
-Źródło i wydania: https://github.com/wppoland/plogins-locator
+Kod źródłowy i zgłoszenia: https://github.com/wppoland/plogins-locator
 
 <strong>Funkcje</strong>
 
 * Lokalizacje sklepów działają jako własny typ postu w menu WooCommerce.
 * Każda lokalizacja zachowuje swój adres, miasto, kod pocztowy, kraj, telefon i godziny otwarcia.
-* Krótki kod `[locator]` renderuje katalog; możesz pozostawić pole wyszukiwania wyłączone, jeśli masz tylko kilka sklepów.
+* Shortcode `[locator]` renderuje katalog; możesz pozostawić pole wyszukiwania wyłączone, jeśli masz tylko kilka sklepów.
 * Wyszukiwanie po stronie klienta odbywa się według nazwy, adresu, miasta, kodu pocztowego i kraju. Podczas pisania nie jest wysyłane żadne żądanie.
 * Wyświetlanie poszczególnych kart umożliwia przełączanie adresu, godzin otwarcia i telefonu (zawsze wyświetlana jest nazwa sklepu).
 * Liczba wyników jest ogłaszana w aktywnym regionie ARIA, pole wyszukiwania można obsługiwać za pomocą klawiatury, a karty korzystają z widocznych konturów.
-* Arkusz stylów i skrypty ładują się tylko na stronach, na których faktycznie wyrenderowano krótki kod, a znaczniki pozwalają uniknąć zmiany układu.
-* Style witryn sklepowych są zgodne z preferencjami gościa dotyczącymi jasności/ciemności i honorują preferencje ograniczonego ruchu.
+* Arkusz stylów i skrypt ładują się tylko na stronach, na których faktycznie wyrenderowano shortcode, a znaczniki pozwalają uniknąć przesunięć układu.
+* Style sklepu są zgodne z preferencją jasnego/ciemnego trybu odwiedzającego i respektują preferencję ograniczonego ruchu (prefers-reduced-motion).
 
 == Installation ==
 
@@ -42,7 +42,7 @@ całkowicie w przeglądarce.
 2. Aktywuj. WooCommerce musi być aktywny.
 3. Przejdź do WooCommerce → Lokalizacje sklepów i dodaj swoje sklepy.
 4. Skonfiguruj WooCommerce → Lokalizator sklepów (pole wyszukiwania i widoczne pola).
-5. Dodaj krótki kod `[locator]` do dowolnej strony.
+5. Dodaj shortcode `[locator]` do dowolnej strony.
 
 == Frequently Asked Questions ==
 
@@ -77,7 +77,7 @@ Tak. Dodaj lokalizacje w <strong>WooCommerce → Lokalizacje sklepów</strong> i
 
 = Does this plugin work on WordPress Multisite? =
 
-Tak. Ta wtyczka jest kompatybilna z WordPress Multisite. Aktywuj go w sieci lub aktywuj na poszczególnych stronach; każda witryna przechowuje własne ustawienia i dane.
+Tak. Ta wtyczka jest kompatybilna z WordPress Multisite. Włącz ją dla całej sieci lub na poszczególnych stronach; każda witryna przechowuje własne ustawienia i dane.
 
 == Screenshots ==
 
@@ -86,26 +86,33 @@ Tak. Ta wtyczka jest kompatybilna z WordPress Multisite. Aktywuj go w sieci lub 
 
 == External Services ==
 
-Lokalizator nie łączy się z żadną usługą zewnętrzną. Nie rejestruje żadnego zdalnego interfejsu API, nie wysyła żądań HTTP i nie ładuje żadnych skryptów, czcionek, map ani kafelków innych firm. Dane Twojego sklepu nigdy nie opuszczają Twojej witryny.
+Locator nie łączy się z żadną usługą zewnętrzną. Nie rejestruje żadnego zdalnego interfejsu API, nie wysyła żądań HTTP i nie ładuje żadnych skryptów, czcionek, map ani kafelków innych firm. Dane Twojego sklepu nigdy nie opuszczają Twojej witryny.
 
-Każda lokalizacja jest przechowywana na Twoim własnym serwerze jako post w „lokalizatorze_sklepu” z jej adresem, miastem, kodem pocztowym, krajem, telefonem, godzinami otwarcia, adresem e-mail i dowolną szerokością/długością geograficzną przechowywaną w meta tego wpisu. Ustawienia znajdują się w opcji `locator_settings`. Współrzędne są wpisywane ręcznie na ekranie lokalizacji – nic nie jest geokodowane względem zewnętrznego dostawcy. Wyszukiwanie w witrynie sklepowej filtruje karty w przeglądarce odwiedzającego, więc podczas pisania nie jest wysyłane żadne żądanie, a wtyczka nie wysyła wiadomości e-mail.
+Każda lokalizacja jest przechowywana na Twoim własnym serwerze jako wpis typu `locator_store` – wraz z adresem, miastem, kodem pocztowym, krajem, telefonem, godzinami otwarcia, adresem e-mail i ewentualną szerokością/długością geograficzną przechowywaną w metadanych tego wpisu. Ustawienia znajdują się w opcji `locator_settings`. Współrzędne są wpisywane ręcznie na ekranie lokalizacji – nic nie jest geokodowane względem zewnętrznego dostawcy. Wyszukiwanie w sklepie filtruje karty w przeglądarce odwiedzającego, więc podczas pisania nie jest wysyłane żadne żądanie, a wtyczka nie wysyła wiadomości e-mail.
+
+== Translations ==
+
+Plogins Locator zawiera polskie, niemieckie i hiszpańskie tłumaczenia interfejsu wtyczki. Domeną tekstową jest `plogins-locator`, więc paczki językowe z WordPress.org mogą też nadpisywać lub uzupełniać te dołączone tłumaczenia.
 
 == Changelog ==
+
+= 1.0.2 =
+* Dodano dołączone polskie, niemieckie i hiszpańskie tłumaczenia interfejsu wtyczki.
 
 = 1.0.1 =
 * Pierwsza stabilna wersja.
 
 = 0.1.4 =
-* Zmieniono nazwę na Plogins Locator dla WooCommerce, aby uzyskać bardziej charakterystyczną nazwę wtyczki.
+* Zmieniono nazwę na Plogins Locator for WooCommerce, aby uzyskać bardziej charakterystyczną nazwę wtyczki.
 
 = 0.1.3 =
-* Poprawka: lokalizacje sklepów nie przejmują już możliwości „manage_woocommerce”. Zarejestrowanie typu postu lokalizacji zmapowało meta caps na `manage_woocommerce`, co spowodowało niepowodzenie każdej kontroli `manage_woocommerce`, gdy wtyczka była aktywna, ukrywając całe menu administratora WooCommerce (Ustawienia, Status, Zamówienia) i własną stronę ustawień wtyczki.
+* Poprawka: lokalizacje sklepów nie przejmują już uprawnienia `manage_woocommerce`. Zarejestrowanie typu wpisu lokalizacji mapowało meta capabilities na `manage_woocommerce`, co powodowało niepowodzenie każdego sprawdzenia `manage_woocommerce`, gdy wtyczka była aktywna, ukrywając całe menu WooCommerce w kokpicie (Ustawienia, Status, Zamówienia) oraz własną stronę ustawień wtyczki.
 
 = 0.1.2 =
 * Programowy import sklepu poprzez `StoreWriter` z filtrem `locator/import_store_fields` i akcją `locator/store_imported`.
 
 = 0.1.1 =
-* Dodaj filtr „lokator/grupy_sklepów”, aby dodatki mogły grupować katalog witryny sklepowej według regionu lub kraju.
+* Dodano filtr `locator/store_groups`, aby dodatki mogły grupować katalog sklepu według regionu lub kraju.
 
 = 0.1.0 =
-* Wersja pierwsza: typ wpisu o lokalizacji sklepu, krótki kod [locator], lista z możliwością przeszukiwania, ustawienia.
+* Wersja pierwsza: typ wpisu lokalizacji sklepu, shortcode [locator], lista z możliwością przeszukiwania, ustawienia.
