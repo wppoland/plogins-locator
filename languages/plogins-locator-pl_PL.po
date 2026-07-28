@@ -170,8 +170,8 @@ msgid "12 Mill Lane, EC1A 1BB London"
 msgstr "12 Mill Lane, EC1A 1BB London"
 
 #: src/Admin/Settings.php:208
-msgid "Mon–Sat 9:00–18:00"
-msgstr "pon.–sob. 9:00–18:00"
+msgid "Mon, Sat 9:00-18:00"
+msgstr "pon., sob. 9:00-18:00"
 
 #: src/Admin/Settings.php:211
 msgid "+44 20 7946 0000"
@@ -258,8 +258,8 @@ msgid "Longitude"
 msgstr "Długość geograficzna"
 
 #: src/PostType/StoreLocation.php:191
-msgid "One line per day, e.g. \"Mon–Fri: 9:00–18:00\"."
-msgstr "Jeden wiersz na dzień, np. „Pon–Pt: 9:00–18:00”."
+msgid "One line per day, e.g. \"Mon, Fri: 9:00-18:00\"."
+msgstr "Jeden wiersz na dzień, np. „Pon, Pt: 9:00-18:00”."
 
 #: src/PostType/StoreLocation.php:201
 msgid ""
@@ -361,10 +361,10 @@ msgstr "Co dodaje %s"
 
 #~ msgid ""
 #~ "Visitors can instantly filter locations by city, postcode or name. "
-#~ "Filtering happens in the browser — no data leaves the page."
+#~ "Filtering happens in the browser, no data leaves the page."
 #~ msgstr ""
 #~ "Odwiedzający mogą natychmiast filtrować lokalizacje według miasta, kodu "
-#~ "pocztowego lub nazwy. Filtrowanie odbywa się w przeglądarce — żadne dane "
+#~ "pocztowego lub nazwy. Filtrowanie odbywa się w przeglądarce, żadne dane "
 #~ "nie opuszczają strony."
 
 #~ msgid ""

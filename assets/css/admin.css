@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Locator — admin settings + store editor polish
+   Locator, admin settings + store editor polish
 
    Accent matches the storefront map-ink teal (--locator-accent #0f766e) for
    family consistency. Contrast against the wp-admin surface is COMPUTED:
@@ -77,7 +77,7 @@
   max-width: 46ch;
 }
 
-/* Example card — show, don't just toggle. Mirrors the storefront card so the
+/* Example card, show, don't just toggle. Mirrors the storefront card so the
    merchant sees the effect of each field before saving. */
 .locator-admin .locator-preview {
   margin-top: 1.25rem;
@@ -139,7 +139,7 @@
 }
 
 /* ------------------------------------------------------------------ *
- * PRO upsell — dismissible banner, sidebar promo, "what PRO adds"
+ * PRO upsell, dismissible banner, sidebar promo, "what PRO adds"
  * locked cards. Pure advertising (no disabled inputs), scoped to
  * .locator-admin so nothing leaks into the rest of wp-admin.
  *

@@ -1,14 +1,14 @@
 /* ==========================================================================
-   Locator — storefront store-finder directory
+   Locator, storefront store-finder directory
    Wayfinding world: each card is a plotted location. The accent is map-ink
    teal (not default blue); the signature moment is a pin that drops and plants
    onto its card, the way you drop a pin on a map. Theme-friendly tokens,
-   zero layout shift, vanilla JS. Reserve all space up front — pins animate
+   zero layout shift, vanilla JS. Reserve all space up front, pins animate
    transform/opacity only, never reflow.
    ========================================================================== */
 
 .locator {
-  /* Wayfinding palette — map ink, not SaaS blue. */
+  /* Wayfinding palette, map ink, not SaaS blue. */
   --locator-gap: 1.25rem;
   --locator-radius: 14px;
   --locator-border: rgba(15, 60, 56, 0.55);
@@ -164,7 +164,7 @@
   filter: drop-shadow(0 1px 1px rgba(15, 60, 56, 0.25));
 }
 
-/* A small shadow blot the pin lands on — sells the "planted" weight. */
+/* A small shadow blot the pin lands on, sells the "planted" weight. */
 .locator__pin::after {
   content: "";
   position: absolute;

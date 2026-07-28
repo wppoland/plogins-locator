@@ -1,5 +1,5 @@
 /**
- * Locator — client-side store search/filter.
+ * Locator, client-side store search/filter.
  *
  * Progressive enhancement: every store is rendered server-side, so the directory
  * works with JavaScript disabled. When JS runs, typing in the search box filters

@@ -140,12 +140,12 @@ final class StoreLocation implements HasHooks
                 $city     = (string) get_post_meta($postId, self::META_CITY, true);
                 $postcode = (string) get_post_meta($postId, self::META_POSTCODE, true);
                 $parts    = array_filter([$postcode, $city]);
-                echo esc_html('' !== implode(' ', $parts) ? implode(' ', $parts) : '—');
+                echo esc_html('' !== implode(' ', $parts) ? implode(' ', $parts) : '-');
                 break;
 
             case 'locator_phone':
                 $phone = (string) get_post_meta($postId, self::META_PHONE, true);
-                echo esc_html('' !== $phone ? $phone : '—');
+                echo esc_html('' !== $phone ? $phone : '-');
                 break;
         }
     }
@@ -194,7 +194,7 @@ final class StoreLocation implements HasHooks
                                 name="<?php echo esc_attr($metaKey); ?>"><?php echo esc_textarea($value); ?></textarea>
                             <?php if (self::META_HOURS === $metaKey) : ?>
                                 <p class="description">
-                                    <?php esc_html_e('One line per day, e.g. "Mon–Fri: 9:00–18:00".', 'plogins-locator'); ?>
+                                    <?php esc_html_e('One line per day, e.g. "Mon, Fri: 9:00-18:00".', 'plogins-locator'); ?>
                                 </p>
                             <?php endif; ?>
                         <?php else : ?>

@@ -13,7 +13,7 @@ use WP_Query;
 
 /**
  * Reads published store locations from the CPT and hydrates them into Store value
- * objects. Uses WP_Query / post meta only — no custom tables, no external API.
+ * objects. Uses WP_Query / post meta only, no custom tables, no external API.
  */
 final class StoreRepository
 {

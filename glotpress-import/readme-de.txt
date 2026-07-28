@@ -50,8 +50,8 @@ Quellcode und Fehlerberichte: https://github.com/wppoland/plogins-locator
 
 * <strong>Dokumentation</strong> - https://plogins.com/de/plogins-locator/docs/
 * <strong>Plugin-Seite</strong> - https://plogins.com/de/plogins-locator/
-* <strong>Quellcode</strong> – https://github.com/wppoland/plogins-locator
-* <strong>Fehlerberichte und Funktionsanfragen</strong> – https://github.com/wppoland/plogins-locator/issues
+* <strong>Quellcode</strong>, https://github.com/wppoland/plogins-locator
+* <strong>Fehlerberichte und Funktionsanfragen</strong>, https://github.com/wppoland/plogins-locator/issues
 
 
 = Does it require WooCommerce? =
@@ -88,7 +88,7 @@ Ja. Dieses Plugin ist mit WordPress Multisite kompatibel. Aktiviere es im Netzwe
 
 Locator stellt keine Verbindung zu einem externen Dienst her. Es registriert keine Remote-API, sendet keine HTTP-Anfrage und lädt keine Skripte, Schriftarten, Karten oder Kacheln von Drittanbietern. Deine Shop-Daten verlassen niemals deine Website.
 
-Jeder Standort wird auf deinem eigenen Server als `locator_store`-Beitrag gespeichert, wobei Adresse, Stadt, Postleitzahl, Land, Telefonnummer, Öffnungszeiten, E-Mail-Adresse und etwaige Breiten-/Längengrade im Meta dieses Beitrags enthalten sind. Die Einstellungen befinden sich in der Option `locator_settings`. Die Koordinaten werden manuell auf dem Standortbildschirm eingegeben – es erfolgt keine Geokodierung gegenüber einem externen Anbieter. Die Shop-Suche filtert Karten im Browser des Besuchers, sodass beim Tippen keine Anfrage erfolgt und das Plugin keine E-Mail sendet.
+Jeder Standort wird auf deinem eigenen Server als `locator_store`-Beitrag gespeichert, wobei Adresse, Stadt, Postleitzahl, Land, Telefonnummer, Öffnungszeiten, E-Mail-Adresse und etwaige Breiten-/Längengrade im Meta dieses Beitrags enthalten sind. Die Einstellungen befinden sich in der Option `locator_settings`. Die Koordinaten werden manuell auf dem Standortbildschirm eingegeben, es erfolgt keine Geokodierung gegenüber einem externen Anbieter. Die Shop-Suche filtert Karten im Browser des Besuchers, sodass beim Tippen keine Anfrage erfolgt und das Plugin keine E-Mail sendet.
 
 == Translations ==
 

@@ -173,7 +173,7 @@ msgid "12 Mill Lane, EC1A 1BB London"
 msgstr "12 Mill Lane, EC1A 1BB London"
 
 #: src/Admin/Settings.php:208
-msgid "Mon–Sat 9:00–18:00"
+msgid "Mon, Sat 9:00-18:00"
 msgstr "Lunes a sábado de 9:00 a 18:00"
 
 #: src/Admin/Settings.php:211
@@ -261,7 +261,7 @@ msgid "Longitude"
 msgstr "Longitud"
 
 #: src/PostType/StoreLocation.php:191
-msgid "One line per day, e.g. \"Mon–Fri: 9:00–18:00\"."
+msgid "One line per day, e.g. \"Mon, Fri: 9:00-18:00\"."
 msgstr "Una línea por día, p.e. \"De lunes a viernes: de 9:00 a 18:00\"."
 
 #: src/PostType/StoreLocation.php:201

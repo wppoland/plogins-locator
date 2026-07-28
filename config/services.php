@@ -1,7 +1,7 @@
 <?php
 /**
  * Service wiring. Returns a closure that registers every service in the
- * container. Bindings are lazy — nothing is instantiated until first resolved —
+ * container. Bindings are lazy, nothing is instantiated until first resolved, 
  * so the container is safe to build during the activation hook.
  *
  * @package Locator

@@ -19,7 +19,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #: locator.php
 msgid "Locator - Store Locator for WooCommerce"
-msgstr "Locator – Filialfinder für WooCommerce"
+msgstr "Locator, Filialfinder für WooCommerce"
 
 #. Plugin URI of the plugin
 #: locator.php
@@ -171,8 +171,8 @@ msgid "12 Mill Lane, EC1A 1BB London"
 msgstr "12 Mill Lane, EC1A 1BB London"
 
 #: src/Admin/Settings.php:208
-msgid "Mon–Sat 9:00–18:00"
-msgstr "Mo–Sa 9:00–18:00 Uhr"
+msgid "Mon, Sat 9:00-18:00"
+msgstr "Mo, Sa 9:00-18:00 Uhr"
 
 #: src/Admin/Settings.php:211
 msgid "+44 20 7946 0000"
@@ -259,8 +259,8 @@ msgid "Longitude"
 msgstr "Länge"
 
 #: src/PostType/StoreLocation.php:191
-msgid "One line per day, e.g. \"Mon–Fri: 9:00–18:00\"."
-msgstr "Eine Zeile pro Tag, z.B. „Mo–Fr: 9:00–18:00“."
+msgid "One line per day, e.g. \"Mon, Fri: 9:00-18:00\"."
+msgstr "Eine Zeile pro Tag, z.B. „Mo, Fr: 9:00-18:00“."
 
 #: src/PostType/StoreLocation.php:201
 msgid ""

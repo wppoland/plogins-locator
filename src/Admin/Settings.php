@@ -216,7 +216,7 @@ final class Settings implements HasHooks
                                     <span class="locator-preview__line"><?php esc_html_e('12 Mill Lane, EC1A 1BB London', 'plogins-locator'); ?></span>
                                 <?php endif; ?>
                                 <?php if (! empty($fields['hours'])) : ?>
-                                    <span class="locator-preview__line"><?php esc_html_e('Mon–Sat 9:00–18:00', 'plogins-locator'); ?></span>
+                                    <span class="locator-preview__line"><?php esc_html_e('Mon, Sat 9:00-18:00', 'plogins-locator'); ?></span>
                                 <?php endif; ?>
                                 <?php if (! empty($fields['phone'])) : ?>
                                     <span class="locator-preview__line locator-preview__line--accent"><?php esc_html_e('+44 20 7946 0000', 'plogins-locator'); ?></span>

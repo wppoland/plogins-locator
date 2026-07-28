@@ -2,7 +2,7 @@
 /**
  * Autoloading: prefer Composer's vendor autoloader (the optimized classmap).
  * Fall back to a minimal PSR-4 autoloader so the plugin still boots if vendor/
- * is somehow absent. Self-contained — no external package dependencies.
+ * is somehow absent. Self-contained, no external package dependencies.
  *
  * @package Locator
  */

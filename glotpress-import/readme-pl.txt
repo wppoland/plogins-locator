@@ -88,7 +88,7 @@ Tak. Ta wtyczka jest kompatybilna z WordPress Multisite. Włącz ją dla całej 
 
 Locator nie łączy się z żadną usługą zewnętrzną. Nie rejestruje żadnego zdalnego interfejsu API, nie wysyła żądań HTTP i nie ładuje żadnych skryptów, czcionek, map ani kafelków innych firm. Dane Twojego sklepu nigdy nie opuszczają Twojej witryny.
 
-Każda lokalizacja jest przechowywana na Twoim własnym serwerze jako wpis typu `locator_store` – wraz z adresem, miastem, kodem pocztowym, krajem, telefonem, godzinami otwarcia, adresem e-mail i ewentualną szerokością/długością geograficzną przechowywaną w metadanych tego wpisu. Ustawienia znajdują się w opcji `locator_settings`. Współrzędne są wpisywane ręcznie na ekranie lokalizacji – nic nie jest geokodowane względem zewnętrznego dostawcy. Wyszukiwanie w sklepie filtruje karty w przeglądarce odwiedzającego, więc podczas pisania nie jest wysyłane żadne żądanie, a wtyczka nie wysyła wiadomości e-mail.
+Każda lokalizacja jest przechowywana na Twoim własnym serwerze jako wpis typu `locator_store`, wraz z adresem, miastem, kodem pocztowym, krajem, telefonem, godzinami otwarcia, adresem e-mail i ewentualną szerokością/długością geograficzną przechowywaną w metadanych tego wpisu. Ustawienia znajdują się w opcji `locator_settings`. Współrzędne są wpisywane ręcznie na ekranie lokalizacji, nic nie jest geokodowane względem zewnętrznego dostawcy. Wyszukiwanie w sklepie filtruje karty w przeglądarce odwiedzającego, więc podczas pisania nie jest wysyłane żadne żądanie, a wtyczka nie wysyła wiadomości e-mail.
 
 == Translations ==
 
