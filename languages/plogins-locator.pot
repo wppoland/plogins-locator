@@ -26,7 +26,9 @@ msgstr ""
 
 #. Description of the plugin
 #: locator.php
-msgid "Show your physical store locations with a searchable list customers can filter by area."
+msgid ""
+"Show your physical store locations with a searchable list customers can "
+"filter by area."
 msgstr ""
 
 #. Author of the plugin
@@ -64,18 +66,17 @@ msgstr ""
 msgid "Adds the street, postcode, city and country block to each card."
 msgstr ""
 
-#: src/Admin/Settings.php:103
-#: src/PostType/StoreLocation.php:172
+#: src/Admin/Settings.php:103 src/PostType/StoreLocation.php:172
 #: templates/partials/locator-store-item.php:49
 msgid "Opening hours"
 msgstr ""
 
 #: src/Admin/Settings.php:104
-msgid "Shows the hours you entered for the store, so customers know when to visit."
+msgid ""
+"Shows the hours you entered for the store, so customers know when to visit."
 msgstr ""
 
-#: src/Admin/Settings.php:107
-#: src/PostType/StoreLocation.php:121
+#: src/Admin/Settings.php:107 src/PostType/StoreLocation.php:121
 #: src/PostType/StoreLocation.php:168
 msgid "Phone"
 msgstr ""
@@ -89,7 +90,10 @@ msgid "Show customers where to find you"
 msgstr ""
 
 #: src/Admin/Settings.php:118
-msgid "Add your physical stores under WooCommerce → Store Locations, then place the shortcode below on any page to render a searchable, accessible directory your customers can filter by city, postcode or name."
+msgid ""
+"Add your physical stores under WooCommerce → Store Locations, then place the "
+"shortcode below on any page to render a searchable, accessible directory "
+"your customers can filter by city, postcode or name."
 msgstr ""
 
 #. translators: %s: the [locator] shortcode wrapped in <code>.
@@ -114,7 +118,10 @@ msgid "Show the search box above the results."
 msgstr ""
 
 #: src/Admin/Settings.php:151
-msgid "Visitors filter locations as they type, by city, postcode or name. Filtering happens in the browser, so no data leaves the page. Leave off if you only list a handful of stores."
+msgid ""
+"Visitors filter locations as they type, by city, postcode or name. Filtering "
+"happens in the browser, so no data leaves the page. Leave off if you only "
+"list a handful of stores."
 msgstr ""
 
 #: src/Admin/Settings.php:160
@@ -122,11 +129,12 @@ msgid "Fields shown on each card"
 msgstr ""
 
 #: src/Admin/Settings.php:162
-msgid "The store name is always shown. Choose which extra details appear beneath it, each one is only rendered when that store actually has a value."
+msgid ""
+"The store name is always shown. Choose which extra details appear beneath "
+"it, each one is only rendered when that store actually has a value."
 msgstr ""
 
-#: src/Admin/Settings.php:167
-#: src/Admin/Settings.php:171
+#: src/Admin/Settings.php:167 src/Admin/Settings.php:171
 msgid "Visible fields"
 msgstr ""
 
@@ -151,11 +159,11 @@ msgid "+44 20 7946 0000"
 msgstr ""
 
 #: src/Admin/Settings.php:216
-msgid "A live page also adds your search box and shows every store that matches."
+msgid ""
+"A live page also adds your search box and shows every store that matches."
 msgstr ""
 
-#: src/PostType/StoreLocation.php:69
-#: src/PostType/StoreLocation.php:71
+#: src/PostType/StoreLocation.php:69 src/PostType/StoreLocation.php:71
 #: src/PostType/StoreLocation.php:77
 msgid "Store Locations"
 msgstr ""
@@ -196,8 +204,7 @@ msgstr ""
 msgid "No store locations in Trash."
 msgstr ""
 
-#: src/PostType/StoreLocation.php:120
-#: src/PostType/StoreLocation.php:165
+#: src/PostType/StoreLocation.php:120 src/PostType/StoreLocation.php:165
 msgid "City"
 msgstr ""
 
@@ -234,7 +241,9 @@ msgid "One line per day, e.g. \"Mon–Fri: 9:00–18:00\"."
 msgstr ""
 
 #: src/PostType/StoreLocation.php:201
-msgid "Optional. Enter latitude and longitude as decimal degrees (e.g. 52.2297, 21.0122) to place this location on a map."
+msgid ""
+"Optional. Enter latitude and longitude as decimal degrees (e.g. 52.2297, "
+"21.0122) to place this location on a map."
 msgstr ""
 
 #: src/Service/Locator.php:146
@@ -258,4 +267,64 @@ msgstr[1] ""
 
 #: templates/locator-list.php:68
 msgid "No locations match your search."
+msgstr ""
+
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr ""
+
+#. translators: %d: yearly price in PLN
+#: src/Admin/ProUpsell.php:83
+#, php-format
+msgid "od %d zł/rok"
+msgstr ""
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:88
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:97
+msgid "Upgrade to PRO"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:98
+msgid "Powiadom mnie"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:98
+msgid "Get notified"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:128
+msgid "Permission denied."
+msgstr ""
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:158
+#, php-format
+msgid "Do more with %s"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:165
+msgid "Dismiss this notice"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:182
+msgid "Unlock every PRO feature"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:195
+msgid "one licence, every PRO feature"
+msgstr ""
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:214
+#, php-format
+msgid "What %s adds"
 msgstr ""

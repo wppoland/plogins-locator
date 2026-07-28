@@ -12,7 +12,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
+"|| n%100>14) ? 1 : 2);\n"
 "X-Domain: plogins-locator\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -99,8 +100,8 @@ msgstr "Pokaż klientom, gdzie Cię znaleźć"
 
 #: src/Admin/Settings.php:118
 msgid ""
-"Add your physical stores under WooCommerce → Store Locations, then place the"
-" shortcode below on any page to render a searchable, accessible directory "
+"Add your physical stores under WooCommerce → Store Locations, then place the "
+"shortcode below on any page to render a searchable, accessible directory "
 "your customers can filter by city, postcode or name."
 msgstr ""
 "Dodaj swoje sklepy stacjonarne w WooCommerce → Lokalizacje sklepów, a "
@@ -131,13 +132,13 @@ msgstr "Pokaż pole wyszukiwania nad wynikami."
 
 #: src/Admin/Settings.php:151
 msgid ""
-"Visitors filter locations as they type, by city, postcode or name. Filtering"
-" happens in the browser, so no data leaves the page. Leave off if you only "
+"Visitors filter locations as they type, by city, postcode or name. Filtering "
+"happens in the browser, so no data leaves the page. Leave off if you only "
 "list a handful of stores."
 msgstr ""
 "Odwiedzający filtrują lokalizacje podczas wpisywania według miasta, kodu "
-"pocztowego lub nazwy. Filtrowanie odbywa się w przeglądarce, więc żadne dane"
-" nie opuszczają strony. Jeśli podajesz tylko kilka sklepów, pomiń tę opcję."
+"pocztowego lub nazwy. Filtrowanie odbywa się w przeglądarce, więc żadne dane "
+"nie opuszczają strony. Jeśli podajesz tylko kilka sklepów, pomiń tę opcję."
 
 #: src/Admin/Settings.php:160
 msgid "Fields shown on each card"
@@ -292,6 +293,66 @@ msgstr[2] "%d lokalizacji"
 msgid "No locations match your search."
 msgstr "Żadna lokalizacja nie pasuje do Twojego wyszukiwania."
 
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr "Wkrótce"
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr "Wkrótce"
+
+#. translators: %d: yearly price in PLN
+#: src/Admin/ProUpsell.php:83
+#, php-format
+msgid "od %d zł/rok"
+msgstr "od %d zł/rok"
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:88
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr "od %1$s%2$d/rok"
+
+#: src/Admin/ProUpsell.php:97
+msgid "Upgrade to PRO"
+msgstr "Przejdź na PRO"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Powiadom mnie"
+msgstr "Powiadom mnie"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Get notified"
+msgstr "Powiadom mnie"
+
+#: src/Admin/ProUpsell.php:128
+msgid "Permission denied."
+msgstr "Brak uprawnień."
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:158
+#, php-format
+msgid "Do more with %s"
+msgstr "Zrób więcej dzięki %s"
+
+#: src/Admin/ProUpsell.php:165
+msgid "Dismiss this notice"
+msgstr "Odrzuć to powiadomienie"
+
+#: src/Admin/ProUpsell.php:182
+msgid "Unlock every PRO feature"
+msgstr "Odblokuj wszystkie funkcje PRO"
+
+#: src/Admin/ProUpsell.php:195
+msgid "one licence, every PRO feature"
+msgstr "jedna licencja, wszystkie funkcje PRO"
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:214
+#, php-format
+msgid "What %s adds"
+msgstr "Co dodaje %s"
+
 #~ msgid "WPPoland"
 #~ msgstr "WPPoland"
 
@@ -299,15 +360,16 @@ msgstr "Żadna lokalizacja nie pasuje do Twojego wyszukiwania."
 #~ msgstr "Wyświetlanie"
 
 #~ msgid ""
-#~ "Visitors can instantly filter locations by city, postcode or name. Filtering"
-#~ " happens in the browser — no data leaves the page."
+#~ "Visitors can instantly filter locations by city, postcode or name. "
+#~ "Filtering happens in the browser — no data leaves the page."
 #~ msgstr ""
 #~ "Odwiedzający mogą natychmiast filtrować lokalizacje według miasta, kodu "
-#~ "pocztowego lub nazwy. Filtrowanie odbywa się w przeglądarce — żadne dane nie"
-#~ " opuszczają strony."
+#~ "pocztowego lub nazwy. Filtrowanie odbywa się w przeglądarce — żadne dane "
+#~ "nie opuszczają strony."
 
 #~ msgid ""
-#~ "The store name is always shown. Pick which extra details appear beneath it."
+#~ "The store name is always shown. Pick which extra details appear beneath "
+#~ "it."
 #~ msgstr ""
-#~ "Nazwa sklepu jest zawsze widoczna. Wybierz, które dodatkowe informacje mają "
-#~ "pojawić się pod nią."
+#~ "Nazwa sklepu jest zawsze widoczna. Wybierz, które dodatkowe informacje "
+#~ "mają pojawić się pod nią."

@@ -32,8 +32,8 @@ msgid ""
 "Show your physical store locations with a searchable list customers can "
 "filter by area."
 msgstr ""
-"Muestre las ubicaciones de sus tiendas físicas con una lista de búsqueda que"
-" los clientes pueden filtrar por área."
+"Muestre las ubicaciones de sus tiendas físicas con una lista de búsqueda que "
+"los clientes pueden filtrar por área."
 
 #. Author of the plugin
 #: locator.php
@@ -102,8 +102,8 @@ msgstr "Muestra a los clientes dónde encontrarte"
 
 #: src/Admin/Settings.php:118
 msgid ""
-"Add your physical stores under WooCommerce → Store Locations, then place the"
-" shortcode below on any page to render a searchable, accessible directory "
+"Add your physical stores under WooCommerce → Store Locations, then place the "
+"shortcode below on any page to render a searchable, accessible directory "
 "your customers can filter by city, postcode or name."
 msgstr ""
 "Añade sus tiendas físicas en WooCommerce → Ubicaciones de tiendas, luego "
@@ -135,12 +135,12 @@ msgstr "Muestra el cuadro de búsqueda encima de los resultados."
 
 #: src/Admin/Settings.php:151
 msgid ""
-"Visitors filter locations as they type, by city, postcode or name. Filtering"
-" happens in the browser, so no data leaves the page. Leave off if you only "
+"Visitors filter locations as they type, by city, postcode or name. Filtering "
+"happens in the browser, so no data leaves the page. Leave off if you only "
 "list a handful of stores."
 msgstr ""
-"Los visitantes filtran ubicaciones a medida que escriben, por ciudad, código"
-" postal o nombre. El filtrado se realiza en el navegador, por lo que ningún "
+"Los visitantes filtran ubicaciones a medida que escriben, por ciudad, código "
+"postal o nombre. El filtrado se realiza en el navegador, por lo que ningún "
 "dato sale de la página. Déjelo si solo incluye un puñado de tiendas."
 
 #: src/Admin/Settings.php:160
@@ -294,3 +294,63 @@ msgstr[1] "%d ubicaciones"
 #: templates/locator-list.php:68
 msgid "No locations match your search."
 msgstr "Ninguna ubicación coincide con su búsqueda."
+
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr "Próximamente"
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr "Próximamente"
+
+#. translators: %d: yearly price in PLN
+#: src/Admin/ProUpsell.php:83
+#, php-format
+msgid "od %d zł/rok"
+msgstr "desde %d zł/año"
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:88
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr "desde %1$s%2$d/año"
+
+#: src/Admin/ProUpsell.php:97
+msgid "Upgrade to PRO"
+msgstr "Mejora a PRO"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Powiadom mnie"
+msgstr "Avísame"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Get notified"
+msgstr "Avísame"
+
+#: src/Admin/ProUpsell.php:128
+msgid "Permission denied."
+msgstr "Permiso denegado."
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:158
+#, php-format
+msgid "Do more with %s"
+msgstr "Haz más con %s"
+
+#: src/Admin/ProUpsell.php:165
+msgid "Dismiss this notice"
+msgstr "Descartar este aviso"
+
+#: src/Admin/ProUpsell.php:182
+msgid "Unlock every PRO feature"
+msgstr "Desbloquea todas las funciones PRO"
+
+#: src/Admin/ProUpsell.php:195
+msgid "one licence, every PRO feature"
+msgstr "una licencia, todas las funciones PRO"
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:214
+#, php-format
+msgid "What %s adds"
+msgstr "Lo que añade %s"

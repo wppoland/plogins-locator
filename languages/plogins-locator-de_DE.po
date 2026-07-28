@@ -79,8 +79,8 @@ msgstr "Öffnungszeiten"
 msgid ""
 "Shows the hours you entered for the store, so customers know when to visit."
 msgstr ""
-"Zeigt die Öffnungszeiten an, die du für das Geschäft eingegeben haben, damit"
-" Kunden wissen, wann sie vorbeikommen müssen."
+"Zeigt die Öffnungszeiten an, die du für das Geschäft eingegeben haben, damit "
+"Kunden wissen, wann sie vorbeikommen müssen."
 
 #: src/Admin/Settings.php:107 src/PostType/StoreLocation.php:121
 #: src/PostType/StoreLocation.php:168
@@ -99,14 +99,14 @@ msgstr "Zeige deinen Kunden, wo sie Sie finden können"
 
 #: src/Admin/Settings.php:118
 msgid ""
-"Add your physical stores under WooCommerce → Store Locations, then place the"
-" shortcode below on any page to render a searchable, accessible directory "
+"Add your physical stores under WooCommerce → Store Locations, then place the "
+"shortcode below on any page to render a searchable, accessible directory "
 "your customers can filter by city, postcode or name."
 msgstr ""
 "Füge deine physischen Geschäfte unter WooCommerce → Filialstandorte hinzu "
 "und platziere dann den Shortcode unten auf einer beliebigen Seite, um ein "
-"durchsuchbares, zugängliches Verzeichnis zu erstellen, das deine Kunden nach"
-" Stadt, Postleitzahl oder Name filtern können."
+"durchsuchbares, zugängliches Verzeichnis zu erstellen, das deine Kunden nach "
+"Stadt, Postleitzahl oder Name filtern können."
 
 #. translators: %s: the [locator] shortcode wrapped in <code>.
 #: src/Admin/Settings.php:124
@@ -133,12 +133,12 @@ msgstr "Zeige das Suchfeld über den Ergebnissen an."
 
 #: src/Admin/Settings.php:151
 msgid ""
-"Visitors filter locations as they type, by city, postcode or name. Filtering"
-" happens in the browser, so no data leaves the page. Leave off if you only "
+"Visitors filter locations as they type, by city, postcode or name. Filtering "
+"happens in the browser, so no data leaves the page. Leave off if you only "
 "list a handful of stores."
 msgstr ""
-"Besucher filtern Standorte während der Eingabe nach Stadt, Postleitzahl oder"
-" Name. Die Filterung erfolgt im Browser, sodass keine Daten die Seite "
+"Besucher filtern Standorte während der Eingabe nach Stadt, Postleitzahl oder "
+"Name. Die Filterung erfolgt im Browser, sodass keine Daten die Seite "
 "verlassen. Lass es weg, wenn du nur eine Handvoll Geschäfte auflisten."
 
 #: src/Admin/Settings.php:160
@@ -292,3 +292,63 @@ msgstr[1] "%d Standorte"
 #: templates/locator-list.php:68
 msgid "No locations match your search."
 msgstr "Zu deiner Suche passen keine Standorte."
+
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr "Demnächst"
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr "Demnächst"
+
+#. translators: %d: yearly price in PLN
+#: src/Admin/ProUpsell.php:83
+#, php-format
+msgid "od %d zł/rok"
+msgstr "ab %d zł/Jahr"
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:88
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr "ab %1$s%2$d/Jahr"
+
+#: src/Admin/ProUpsell.php:97
+msgid "Upgrade to PRO"
+msgstr "Auf PRO upgraden"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Powiadom mnie"
+msgstr "Benachrichtige mich"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Get notified"
+msgstr "Benachrichtige mich"
+
+#: src/Admin/ProUpsell.php:128
+msgid "Permission denied."
+msgstr "Zugriff verweigert."
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:158
+#, php-format
+msgid "Do more with %s"
+msgstr "Mehr erreichen mit %s"
+
+#: src/Admin/ProUpsell.php:165
+msgid "Dismiss this notice"
+msgstr "Diesen Hinweis ausblenden"
+
+#: src/Admin/ProUpsell.php:182
+msgid "Unlock every PRO feature"
+msgstr "Alle PRO-Funktionen freischalten"
+
+#: src/Admin/ProUpsell.php:195
+msgid "one licence, every PRO feature"
+msgstr "eine Lizenz, alle PRO-Funktionen"
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:214
+#, php-format
+msgid "What %s adds"
+msgstr "Was %s ergänzt"
