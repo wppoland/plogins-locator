@@ -83,7 +83,8 @@ final class StoreListSearch implements HasHooks
         $likeSql = $wpdb->prepare('%s', $like);
 
         // Meta keys are our own constants (no user input); quote them safely.
-        $keys = "'" . implode("', '", array_map('esc_sql', self::SEARCH_META)) . "'";
+        $escaped = array_map(static fn (string $key): string => (string) esc_sql($key), self::SEARCH_META);
+        $keys    = "'" . implode("', '", $escaped) . "'";
 
         return " AND ( {$wpdb->posts}.post_title LIKE {$likeSql}"
             . " OR {$wpdb->posts}.post_content LIKE {$likeSql}"
