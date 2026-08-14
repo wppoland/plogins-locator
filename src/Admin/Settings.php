@@ -25,8 +25,12 @@ final class Settings implements HasHooks
     private const PAGE  = 'locator-settings';
     private const GROUP = 'locator_settings_group';
 
-    /** Fields the merchant can toggle on the storefront cards. */
-    private const TOGGLEABLE_FIELDS = ['address', 'hours', 'phone'];
+    /**
+     * Fields the merchant can toggle on the storefront cards. Photo, description
+     * and email joined the list once the cards learned to print them: until then
+     * the location screen collected all three and the storefront showed none.
+     */
+    private const TOGGLEABLE_FIELDS = ['photo', 'description', 'address', 'hours', 'phone', 'email'];
 
     private ?ProUpsell $proUpsell = null;
 
@@ -103,17 +107,29 @@ final class Settings implements HasHooks
         $fields = is_array($settings['fields'] ?? null) ? $settings['fields'] : [];
 
         $fieldLabels = [
-            'address' => [
+            'photo'       => [
+                'label' => __('Store photo', 'plogins-locator'),
+                'help'  => __('Shows the featured image you set on the location, at the top of its card.', 'plogins-locator'),
+            ],
+            'description' => [
+                'label' => __('Description', 'plogins-locator'),
+                'help'  => __('Prints the text you wrote in the location editor, under the store name.', 'plogins-locator'),
+            ],
+            'address'     => [
                 'label' => __('Address', 'plogins-locator'),
                 'help'  => __('Adds the street, postcode, city and country block to each card.', 'plogins-locator'),
             ],
-            'hours'   => [
+            'hours'       => [
                 'label' => __('Opening hours', 'plogins-locator'),
                 'help'  => __('Shows the hours you entered for the store, so customers know when to visit.', 'plogins-locator'),
             ],
-            'phone'   => [
+            'phone'       => [
                 'label' => __('Phone', 'plogins-locator'),
                 'help'  => __('Shows a click-to-call number, tapping it dials the store on mobile.', 'plogins-locator'),
+            ],
+            'email'       => [
+                'label' => __('Email', 'plogins-locator'),
+                'help'  => __('Shows the store email as a click-to-write link, next to the phone number.', 'plogins-locator'),
             ],
         ];
         ?>
@@ -170,7 +186,7 @@ final class Settings implements HasHooks
                 <div class="locator-card">
                     <h2 class="locator-card__title"><?php esc_html_e('Fields shown on each card', 'plogins-locator'); ?></h2>
                     <p class="locator-card__intro">
-                        <?php esc_html_e('The store name is always shown. Choose which extra details appear beneath it, each one is only rendered when that store actually has a value.', 'plogins-locator'); ?>
+                        <?php esc_html_e('The store name is always shown. Choose which extra details appear around it, the photo above and the rest beneath. Each one is only rendered when that store actually has a value.', 'plogins-locator'); ?>
                     </p>
                     <table class="form-table" role="presentation">
                         <tbody>
@@ -211,7 +227,13 @@ final class Settings implements HasHooks
                                 </svg>
                             </span>
                             <div class="locator-preview__body">
+                                <?php if (! empty($fields['photo'])) : ?>
+                                    <span class="locator-preview__photo"></span>
+                                <?php endif; ?>
                                 <strong class="locator-preview__name"><?php esc_html_e('Riverside Store', 'plogins-locator'); ?></strong>
+                                <?php if (! empty($fields['description'])) : ?>
+                                    <span class="locator-preview__line"><?php esc_html_e('Our oldest shop, on the water since 1998.', 'plogins-locator'); ?></span>
+                                <?php endif; ?>
                                 <?php if (! empty($fields['address'])) : ?>
                                     <span class="locator-preview__line"><?php esc_html_e('12 Mill Lane, EC1A 1BB London', 'plogins-locator'); ?></span>
                                 <?php endif; ?>
@@ -220,6 +242,9 @@ final class Settings implements HasHooks
                                 <?php endif; ?>
                                 <?php if (! empty($fields['phone'])) : ?>
                                     <span class="locator-preview__line locator-preview__line--accent"><?php esc_html_e('+44 20 7946 0000', 'plogins-locator'); ?></span>
+                                <?php endif; ?>
+                                <?php if (! empty($fields['email'])) : ?>
+                                    <span class="locator-preview__line locator-preview__line--accent"><?php esc_html_e('riverside@example.com', 'plogins-locator'); ?></span>
                                 <?php endif; ?>
                             </div>
                         </div>

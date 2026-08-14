@@ -121,6 +121,18 @@
   gap: 0.15rem;
 }
 
+/* Stand-in for the location's featured image, so the photo toggle also shows
+   its effect on the example card. */
+.locator-admin .locator-preview__photo {
+  display: block;
+  width: 100%;
+  height: 54px;
+  margin-bottom: 0.4rem;
+  border-radius: 6px;
+  background: var(--locator-admin-accent);
+  opacity: 0.28;
+}
+
 .locator-admin .locator-preview__name {
   font-size: 0.95rem;
 }

@@ -27,7 +27,26 @@ $locator_fields = isset($locator_fields) && is_array($locator_fields) ? $locator
             </svg>
         </span>
         <div class="locator__body">
+            <?php
+            // The location screen offers a featured image and the content editor,
+            // and both were hydrated into the Store object and then thrown away:
+            // a merchant uploaded a shopfront photo and wrote a paragraph about
+            // the branch, and the shopper got a pin, a name and three lines of
+            // detail. Both are printed here now, each behind its own toggle and
+            // only when that location actually has one.
+            if (! empty($locator_fields['photo']) && '' !== trim($locator_store->thumbnailUrl)) :
+                ?>
+                <img class="locator__photo" src="<?php echo esc_url($locator_store->thumbnailUrl); ?>"
+                    alt="" loading="lazy" decoding="async" />
+            <?php endif; ?>
+
             <h3 class="locator__name"><?php echo esc_html($locator_store->name); ?></h3>
+
+            <?php if (! empty($locator_fields['description']) && '' !== trim($locator_store->description)) : ?>
+                <div class="locator__description">
+                    <?php echo wp_kses_post(wpautop($locator_store->description)); ?>
+                </div>
+            <?php endif; ?>
 
             <?php
             if (! empty($locator_fields['address'])) :
@@ -51,13 +70,30 @@ $locator_fields = isset($locator_fields) && is_array($locator_fields) ? $locator
                 </div>
             <?php endif; ?>
 
-            <?php if (! empty($locator_fields['phone']) && '' !== trim($locator_store->phone)) : ?>
+            <?php
+            // Email was saved as _locator_email, hydrated into the Store object
+            // and then never printed: the merchant filled in the branch address
+            // expecting it beside the phone number, the shopper only ever saw the
+            // number. It now sits in the same contact list, behind its own toggle.
+            $locator_show_phone = ! empty($locator_fields['phone']) && '' !== trim($locator_store->phone);
+            $locator_show_email = ! empty($locator_fields['email']) && is_email($locator_store->email);
+            ?>
+            <?php if ($locator_show_phone || $locator_show_email) : ?>
                 <ul class="locator__contact">
-                    <li class="locator__phone">
-                        <a href="<?php echo esc_url('tel:' . preg_replace('/[^0-9+]/', '', $locator_store->phone)); ?>">
-                            <?php echo esc_html($locator_store->phone); ?>
-                        </a>
-                    </li>
+                    <?php if ($locator_show_phone) : ?>
+                        <li class="locator__phone">
+                            <a href="<?php echo esc_url('tel:' . preg_replace('/[^0-9+]/', '', $locator_store->phone)); ?>">
+                                <?php echo esc_html($locator_store->phone); ?>
+                            </a>
+                        </li>
+                    <?php endif; ?>
+                    <?php if ($locator_show_email) : ?>
+                        <li class="locator__email">
+                            <a href="<?php echo esc_url('mailto:' . $locator_store->email); ?>">
+                                <?php echo esc_html($locator_store->email); ?>
+                            </a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             <?php endif; ?>
         </div>

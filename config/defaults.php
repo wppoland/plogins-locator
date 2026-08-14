@@ -17,8 +17,11 @@ return [
 
     // Which detail fields appear on each store card. Name is always shown.
     'fields' => [
-        'address' => true,
-        'hours'   => true,
-        'phone'   => true,
+        'photo'       => true,
+        'description' => true,
+        'address'     => true,
+        'hours'       => true,
+        'phone'       => true,
+        'email'       => true,
     ],
 ];

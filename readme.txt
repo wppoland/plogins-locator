@@ -4,7 +4,7 @@ Tags: woocommerce, store locator, store finder, locations, shortcode
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -14,7 +14,8 @@ Show your physical store locations with a searchable, accessible list customers 
 == Description ==
 
 Locator lists your physical shops on the storefront. You enter each location once
-in wp-admin (name, address, city, postcode, country, phone and opening hours), then
+in wp-admin (name, address, city, postcode, country, phone, email, opening hours,
+a photo and a description), then
 add the `[locator]` shortcode to any page to print a searchable directory.
 
 There is no map and no external service. No Google Maps key, no API call, no
@@ -28,10 +29,10 @@ Source and issues: https://github.com/wppoland/plogins-locator
 **Features**
 
 * Store Locations live as their own post type under the WooCommerce menu.
-* Each location keeps its address, city, postcode, country, phone and opening hours.
+* Each location keeps its address, city, postcode, country, phone, email and opening hours, plus a photo and a description.
 * The `[locator]` shortcode renders the directory; you can leave the search box off if you only have a couple of shops.
 * Search runs client-side over name, address, city, postcode and country. No request is sent while typing.
-* Per-card display toggles for address, opening hours and phone (the store name always shows).
+* Per-card display toggles for photo, description, address, opening hours, phone and email (the store name always shows).
 * The result count is announced through an ARIA live region, the search field is keyboard-operable, and cards use focus-visible outlines.
 * Stylesheet and script load only on pages where the shortcode actually rendered, and the markup avoids layout shift.
 * Storefront styles follow the visitor's light/dark preference and honour prefers-reduced-motion.
@@ -64,7 +65,7 @@ No. Locator renders a searchable list of cards, not a map, so it needs no map ke
 
 = Which details can I show on each card? =
 
-The store name is always shown. You can toggle address, opening hours and phone in the settings.
+The store name is always shown. You can toggle the store photo, the description, the address, opening hours, phone and email in the settings. Each one only appears on a card when that location actually has a value for it.
 
 = How does the search box work? =
 
@@ -95,6 +96,12 @@ Every location is stored on your own server as a `locator_store` post, with its 
 Plogins Locator includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-locator`, so WordPress.org language packs can also override or extend these bundled translations.
 
 == Changelog ==
+
+= 1.0.7 =
+* The store email you type on a location now appears on its card, as a click-to-write link beside the phone number. Until now it was saved and never shown to shoppers.
+* The featured image you set on a location now appears at the top of its card.
+* The text you write in the location editor now appears under the store name.
+* Photo, description and email each get their own switch under WooCommerce → Store Locator, alongside the address, opening hours and phone switches.
 
 = 1.0.6 =
 * Internal: the store-list search builds its meta-key list through an explicitly typed map, so static analysis can see that only strings reach the query. No change in behaviour.
