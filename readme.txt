@@ -4,7 +4,7 @@ Tags: woocommerce, store locator, store finder, locations, shortcode
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.0.7
+Stable tag: 1.1.0
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -24,7 +24,7 @@ visible even with JavaScript turned off. When JavaScript runs, the search box hi
 and shows cards as the visitor types, filtering by city, postcode or store name
 entirely in the browser.
 
-Source and issues: https://github.com/wppoland/plogins-locator
+Source and issues: [github.com/wppoland/plogins-locator](https://github.com/wppoland/plogins-locator)
 
 **Features**
 
@@ -36,6 +36,7 @@ Source and issues: https://github.com/wppoland/plogins-locator
 * The result count is announced through an ARIA live region, the search field is keyboard-operable, and cards use focus-visible outlines.
 * Stylesheet and script load only on pages where the shortcode actually rendered, and the markup avoids layout shift.
 * Storefront styles follow the visitor's light/dark preference and honour prefers-reduced-motion.
+* On WordPress 6.9 and newer, an AI assistant in wp-admin can list your locations, look one up and read the directory settings, through the WordPress Abilities API. Reading only; it cannot add or change a location.
 
 == Installation ==
 
@@ -49,10 +50,10 @@ Source and issues: https://github.com/wppoland/plogins-locator
 
 = Documentation and links =
 
-* **Documentation** - https://plogins.com/plogins-locator/docs/
-* **Plugin page** - https://plogins.com/plogins-locator/
-* **Source code** - https://github.com/wppoland/plogins-locator
-* **Bug reports and feature requests** - https://github.com/wppoland/plogins-locator/issues
+* **Documentation**: [plogins.com/plogins-locator/docs/](https://plogins.com/plogins-locator/docs/)
+* **Plugin page**: [plogins.com/plogins-locator/](https://plogins.com/plogins-locator/)
+* **Source code**: [github.com/wppoland/plogins-locator](https://github.com/wppoland/plogins-locator)
+* **Bug reports and feature requests**: [github.com/wppoland/plogins-locator/issues](https://github.com/wppoland/plogins-locator/issues)
 
 
 = Does it require WooCommerce? =
@@ -96,6 +97,10 @@ Every location is stored on your own server as a `locator_store` post, with its 
 Plogins Locator includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-locator`, so WordPress.org language packs can also override or extend these bundled translations.
 
 == Changelog ==
+
+= 1.1.0 =
+* An AI assistant working in your wp-admin can now read your store locations for you, through the WordPress Abilities API (WordPress 6.9 and later). Ask it for the shop in a given city or postcode and it reads back the address, phone, email and opening hours, exactly what the storefront search box would find. It can also tell you how the directory is set up.
+* Reading only. Nothing an assistant can call adds, edits or removes a location; that stays in your hands. Only users who can manage WooCommerce can use these, and on WordPress 6.8 and earlier nothing changes.
 
 = 1.0.7 =
 * The store email you type on a location now appears on its card, as a click-to-write link beside the phone number. Until now it was saved and never shown to shoppers.
