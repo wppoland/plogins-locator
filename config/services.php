@@ -15,6 +15,7 @@ use Locator\Container;
 use Locator\Migrator;
 use Locator\PostType\StoreLocation;
 use Locator\Repository\StoreRepository;
+use Locator\Service\AbilitiesService;
 use Locator\Service\Locator;
 use Locator\Service\StoreWriter;
 use Locator\Util\TemplateLoader;
@@ -42,6 +43,14 @@ return static function (Container $c): void {
     $c->singleton(Locator::class, static fn (): Locator => new Locator(
         $c->get(StoreRepository::class),
         $c->get(TemplateLoader::class),
+        $c->get(Settings::class),
+    ));
+
+    // Abilities API surface (WP 6.9+). Read only: it goes through the same
+    // repository the storefront directory reads, and holds no writer, so an
+    // assistant can look a location up but never change one.
+    $c->singleton(AbilitiesService::class, static fn (): AbilitiesService => new AbilitiesService(
+        $c->get(StoreRepository::class),
         $c->get(Settings::class),
     ));
 };
