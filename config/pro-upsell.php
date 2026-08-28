@@ -15,7 +15,6 @@ return [
     'sellable'   => true,
     'price_from' => 29,
     'currency'   => 'EUR',
-    'price_pln'  => 129,
     'lead'       => [
         'en' => 'Interactive map, region grouping and bulk CSV import. Feature-complete PRO.',
         'pl' => 'Interaktywna mapa, grupowanie po regionach i import zbiorczy z CSV. Kompletna wersja PRO.',
