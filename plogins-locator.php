@@ -28,7 +28,7 @@ namespace Locator;
 
 defined('ABSPATH') || exit;
 
-const VERSION     = '1.1.0';
+const VERSION     = '1.1.1';
 const PLUGIN_FILE     = __FILE__;
 const PLUGIN_DIR      = __DIR__;
 const MIN_PHP_VERSION = '8.1.0';
