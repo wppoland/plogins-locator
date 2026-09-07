@@ -2,21 +2,21 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Locator - Store Locator for WooCommerce 1.1.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/plogins-locator\n"
+"Project-Id-Version: Plogins Locator - Store Locator for WooCommerce 1.1.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/locator\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-15T09:24:56+00:00\n"
+"POT-Creation-Date: 2026-09-07T12:59:43+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: plogins-locator\n"
 
 #. Plugin Name of the plugin
 #: plogins-locator.php
-msgid "Locator - Store Locator for WooCommerce"
+msgid "Plogins Locator - Store Locator for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin
@@ -40,12 +40,12 @@ msgid "https://wppoland.com"
 msgstr ""
 
 #. translators: 1: Required PHP version, 2: Current PHP version
-#: plogins-locator.php:57
+#: plogins-locator.php:56
 #, php-format
 msgid "Locator requires PHP %1$s or higher. You are running PHP %2$s."
 msgstr ""
 
-#: plogins-locator.php:76
+#: plogins-locator.php:75
 msgid "Locator requires WooCommerce to be installed and activated."
 msgstr ""
 
@@ -57,54 +57,48 @@ msgstr ""
 msgid "Coming soon"
 msgstr ""
 
-#. translators: %d: yearly price in PLN
-#: src/Admin/ProUpsell.php:83
-#, php-format
-msgid "od %d zł/rok"
-msgstr ""
-
 #. translators: 1: currency symbol, 2: yearly price
-#: src/Admin/ProUpsell.php:88
+#: src/Admin/ProUpsell.php:84
 #, php-format
 msgid "from %1$s%2$d/yr"
 msgstr ""
 
-#: src/Admin/ProUpsell.php:97
+#: src/Admin/ProUpsell.php:93
 msgid "Upgrade to PRO"
 msgstr ""
 
-#: src/Admin/ProUpsell.php:98
+#: src/Admin/ProUpsell.php:94
 msgid "Powiadom mnie"
 msgstr ""
 
-#: src/Admin/ProUpsell.php:98
+#: src/Admin/ProUpsell.php:94
 msgid "Get notified"
 msgstr ""
 
-#: src/Admin/ProUpsell.php:128
+#: src/Admin/ProUpsell.php:124
 msgid "Permission denied."
 msgstr ""
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:158
+#: src/Admin/ProUpsell.php:154
 #, php-format
 msgid "Do more with %s"
 msgstr ""
 
-#: src/Admin/ProUpsell.php:165
+#: src/Admin/ProUpsell.php:161
 msgid "Dismiss this notice"
 msgstr ""
 
-#: src/Admin/ProUpsell.php:182
+#: src/Admin/ProUpsell.php:178
 msgid "Unlock every PRO feature"
 msgstr ""
 
-#: src/Admin/ProUpsell.php:195
+#: src/Admin/ProUpsell.php:191
 msgid "one licence, every PRO feature"
 msgstr ""
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:214
+#: src/Admin/ProUpsell.php:210
 #, php-format
 msgid "What %s adds"
 msgstr ""
@@ -328,51 +322,43 @@ msgstr ""
 msgid "Optional. Enter latitude and longitude as decimal degrees (e.g. 52.2297, 21.0122) to place this location on a map."
 msgstr ""
 
-#: src/Service/AbilitiesService.php:56
+#: src/Service/AbilitiesService.php:55
 msgid "Locator: store locations"
 msgstr ""
 
-#: src/Service/AbilitiesService.php:57
+#: src/Service/AbilitiesService.php:56
 msgid "Physical store locations with their address, contact details and opening hours."
 msgstr ""
 
-#: src/Service/AbilitiesService.php:61
+#: src/Service/AbilitiesService.php:60
 msgid "Locator: directory settings"
 msgstr ""
 
-#: src/Service/AbilitiesService.php:62
+#: src/Service/AbilitiesService.php:61
 msgid "How the storefront directory is configured: search box and visible card fields."
 msgstr ""
 
-#: src/Service/AbilitiesService.php:81
+#: src/Service/AbilitiesService.php:79
 msgid "List store locations"
 msgstr ""
 
-#: src/Service/AbilitiesService.php:82
+#: src/Service/AbilitiesService.php:80
 msgid "Returns published store locations with address, contact details and opening hours. An optional search term matches the same name, address, city, postcode and country text the storefront search box filters on."
 msgstr ""
 
-#: src/Service/AbilitiesService.php:130
+#: src/Service/AbilitiesService.php:128
 msgid "Get a store location"
 msgstr ""
 
-#: src/Service/AbilitiesService.php:131
+#: src/Service/AbilitiesService.php:129
 msgid "Returns one published store location by its ID, with address, contact details and opening hours."
 msgstr ""
 
-#: src/Service/AbilitiesService.php:166
-msgid "Add or update a store location"
-msgstr ""
-
-#: src/Service/AbilitiesService.php:167
-msgid "Creates a published store location, or updates an existing one when a store ID is given. Runs through the same importer add-ons use, so the locator/import_store_fields filter and locator/store_imported action still fire."
-msgstr ""
-
-#: src/Service/AbilitiesService.php:231
+#: src/Service/AbilitiesService.php:165
 msgid "Get directory settings"
 msgstr ""
 
-#: src/Service/AbilitiesService.php:232
+#: src/Service/AbilitiesService.php:166
 msgid "Returns whether the storefront search box is shown and which detail fields appear on each store card."
 msgstr ""
 
