@@ -29,8 +29,8 @@ return [
             'pl' => ['title' => 'Grupowanie po regionach', 'desc' => 'Grupuj lokalizacje po regionie lub kraju na liście [locator], aby duże katalogi pozostały czytelne.'],
         ],
         [
-            'en' => ['title' => 'Bulk import', 'desc' => 'Import or update locations from CSV on WooCommerce → Store Locator Import instead of adding each store by hand.'],
-            'pl' => ['title' => 'Import zbiorczy', 'desc' => 'Importuj lub aktualizuj lokalizacje z pliku CSV na ekranie WooCommerce → Store Locator Import.'],
+            'en' => ['title' => 'Bulk import', 'desc' => 'Import or update locations from CSV on WooCommerce > Store Locator Import instead of adding each store by hand.'],
+            'pl' => ['title' => 'Import zbiorczy', 'desc' => 'Importuj lub aktualizuj lokalizacje z pliku CSV na ekranie WooCommerce > Store Locator Import.'],
         ],
     ],
 ];
