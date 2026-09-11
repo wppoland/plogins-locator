@@ -3,7 +3,7 @@
 
    Accent matches the storefront map-ink teal (--locator-accent #0f766e) for
    family consistency. Contrast against the wp-admin surface is COMPUTED:
-   #0f766e on #fff = 5.47:1, on #f0f0f1 = 4.81:1 → passes WCAG AA for text
+   #0f766e on #fff = 5.47:1, on #f0f0f1 = 4.81:1 > passes WCAG AA for text
    (>=4.5:1) and UI (>=3:1). Used only for headings/rules/links, never as a
    large fill behind small text.
    ========================================================================== */

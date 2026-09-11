@@ -38,10 +38,10 @@ Código fuente e informes de errores: https://github.com/wppoland/plogins-locato
 
 == Installation ==
 
-1. Sube el complemento a `/wp-content/plugins/locator`, o instálalo a través de Complementos → Añadir nuevo.
+1. Sube el complemento a `/wp-content/plugins/locator`, o instálalo a través de Complementos > Añadir nuevo.
 2. Actívalo. WooCommerce debe estar activo.
-3. Ve a WooCommerce → Ubicaciones de tiendas y añade tus tiendas.
-4. Configura WooCommerce → Localizador de tiendas (cuadro de búsqueda y campos visibles).
+3. Ve a WooCommerce > Ubicaciones de tiendas y añade tus tiendas.
+4. Configura WooCommerce > Localizador de tiendas (cuadro de búsqueda y campos visibles).
 5. Añade el shortcode `[locator]` a cualquier página.
 
 == Frequently Asked Questions ==
@@ -72,7 +72,7 @@ El shortcode `[locator]` filtra las tarjetas de ubicación del lado del cliente 
 
 = Can I add stores without custom code? =
 
-Sí. Añade ubicaciones en <strong>WooCommerce → Ubicaciones de tiendas</strong> y coloca `[locator]` en cualquier página.
+Sí. Añade ubicaciones en <strong>WooCommerce > Ubicaciones de tiendas</strong> y coloca `[locator]` en cualquier página.
 
 
 = Does this plugin work on WordPress Multisite? =

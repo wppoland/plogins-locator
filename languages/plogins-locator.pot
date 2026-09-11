@@ -169,7 +169,7 @@ msgid "Show customers where to find you"
 msgstr ""
 
 #: src/Admin/Settings.php:144
-msgid "Add your physical stores under WooCommerce → Store Locations, then place the shortcode below on any page to render a searchable, accessible directory your customers can filter by city, postcode or name."
+msgid "Add your physical stores under WooCommerce > Store Locations, then place the shortcode below on any page to render a searchable, accessible directory your customers can filter by city, postcode or name."
 msgstr ""
 
 #. translators: %s: the [locator] shortcode wrapped in <code>.

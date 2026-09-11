@@ -141,7 +141,7 @@ final class Settings implements HasHooks
             <div class="locator-intro">
                 <h2><?php esc_html_e('Show customers where to find you', 'plogins-locator'); ?></h2>
                 <p>
-                    <?php esc_html_e('Add your physical stores under WooCommerce → Store Locations, then place the shortcode below on any page to render a searchable, accessible directory your customers can filter by city, postcode or name.', 'plogins-locator'); ?>
+                    <?php esc_html_e('Add your physical stores under WooCommerce > Store Locations, then place the shortcode below on any page to render a searchable, accessible directory your customers can filter by city, postcode or name.', 'plogins-locator'); ?>
                 </p>
                 <p class="locator-shortcode-hint">
                     <?php
