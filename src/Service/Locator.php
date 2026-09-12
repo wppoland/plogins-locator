@@ -24,6 +24,9 @@ use const Locator\VERSION;
  */
 final class Locator implements HasHooks
 {
+    /** Stores rendered by [locator] when the shortcode names no limit. */
+    private const DEFAULT_LIMIT = 200;
+
     private bool $assetsNeeded = false;
 
     public function __construct(
@@ -118,7 +121,34 @@ final class Locator implements HasHooks
     {
         $settings = $this->settings->all();
 
-        $stores = $this->repository->all();
+        $atts = shortcode_atts(
+            ['limit' => ''],
+            is_array($atts) ? $atts : [],
+            'locator',
+        );
+
+        /**
+         * Filter how many stores [locator] renders when the shortcode names no
+         * limit. The directory is rendered server-side and filtered in the
+         * browser, so every store on the page is a row read, a meta cache entry
+         * and a card in the HTML. A shop with a handful of stores never reaches
+         * this; one importing a franchise list would otherwise print all of
+         * them into one public page.
+         *
+         * `[locator limit="-1"]` still renders every store.
+         *
+         * @param int $limit Default number of stores rendered.
+         */
+        $default = (int) apply_filters('locator/default_limit', self::DEFAULT_LIMIT);
+        $limit   = '' === trim((string) $atts['limit']) ? $default : (int) $atts['limit'];
+
+        // `limit="0"` is a typo, not a request for an empty directory, and
+        // WP_Query reads 0 as "use the site default" anyway.
+        if (0 === $limit) {
+            $limit = $default;
+        }
+
+        $stores = $this->repository->all($limit);
 
         // Mark assets for enqueue (search interactivity + styling).
         $this->assetsNeeded = true;

@@ -35,6 +35,11 @@ final class StoreRepository
             'ignore_sticky_posts'    => true,
         ]);
 
+        // One query for every store photo instead of one per store: hydrate()
+        // asks for the featured image URL, and without this each store costs a
+        // separate attachment lookup on a public page.
+        update_post_thumbnail_cache($query);
+
         $stores = [];
 
         foreach ($query->posts as $post) {

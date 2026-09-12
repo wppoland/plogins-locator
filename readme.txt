@@ -4,7 +4,7 @@ Tags: woocommerce, store locator, store finder, locations, shortcode
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.1.7
+Stable tag: 1.1.8
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -31,6 +31,7 @@ Source and issues: [github.com/wppoland/plogins-locator](https://github.com/wppo
 * Store Locations live as their own post type under the WooCommerce menu.
 * Each location keeps its address, city, postcode, country, phone, email and opening hours, plus a photo and a description.
 * The `[locator]` shortcode renders the directory; you can leave the search box off if you only have a couple of shops.
+* The directory renders 200 stores by default; `[locator limit="500"]` raises it and `[locator limit="-1"]` renders every store.
 * Search runs client-side over name, address, city, postcode and country. No request is sent while typing.
 * Per-card display toggles for photo, description, address, opening hours, phone and email (the store name always shows).
 * The result count is announced through an ARIA live region, the search field is keyboard-operable, and cards use focus-visible outlines.
@@ -97,6 +98,9 @@ Every location is stored on your own server as a `locator_store` post, with its 
 Plogins Locator is fully translatable and ships the `plogins-locator.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.8 =
+* Fixed: the directory rendered every published store on the page. The shortcode ignored its attributes entirely, so there was no way to ask for fewer, and a shop with a long franchise list built every store, and a separate photo lookup per store, into one public page. `[locator]` now renders 200 stores and honours `limit`, including `limit="-1"` for all of them, and the store photos are primed in one pass for the whole page instead of a lookup per store.
 
 = 1.1.7 =
 * Fixed: the PRO upgrade promo kept selling to people who had already bought the paid edition. Only the banner could be dismissed, so the sidebar promo and the locked feature cards followed a paying customer around for good. The promo now checks whether the paid edition is active and steps aside when it is.
