@@ -106,6 +106,18 @@
   font-weight: 600;
 }
 
+/* The page is capped, and the shopper is told so before searching for a branch
+   that was never printed. Readable, not decorative, and not a muted whisper. */
+.locator__truncated {
+  margin: 0.75rem 0 0;
+  padding: 0.55rem 0.75rem;
+  border-left: 3px solid var(--locator-accent);
+  border-radius: calc(var(--locator-radius) / 2);
+  background: var(--locator-accent-soft);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
 .locator__empty {
   color: var(--locator-muted);
   font-style: italic;

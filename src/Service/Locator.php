@@ -20,7 +20,9 @@ use const Locator\VERSION;
  * Filtering is performed client-side (no AJAX, no external API): every store
  * carries a lower-cased search haystack on a data attribute, and a small script
  * shows/hides cards as the visitor types. This keeps the directory fast, private
- * and fully functional without JavaScript (all stores are rendered server-side).
+ * and fully functional without JavaScript (every rendered store is in the HTML).
+ * The page is bounded, so the template states how many of the total it lists and
+ * that the search box only reaches the listed ones.
  */
 final class Locator implements HasHooks
 {
@@ -150,6 +152,17 @@ final class Locator implements HasHooks
 
         $stores = $this->repository->all($limit);
 
+        // The page prints a bounded set, but the shopper is told how many
+        // locations exist, not how many fitted: a shop with 700 stores used to
+        // announce "200 locations". Only a page filled to its limit can be
+        // truncated, so the counting query runs only in that case.
+        $listed = count($stores);
+        $total  = $listed;
+
+        if ($limit > 0 && $listed === $limit) {
+            $total = max($listed, $this->repository->count());
+        }
+
         // Mark assets for enqueue (search interactivity + styling).
         $this->assetsNeeded = true;
 
@@ -170,6 +183,7 @@ final class Locator implements HasHooks
 
         return $this->templates->render('locator-list', [
             'stores'       => $stores,
+            'total'        => $total,
             'store_groups' => $storeGroups,
             'show_search'  => ! empty($settings['show_search']),
             'fields'       => $fields,

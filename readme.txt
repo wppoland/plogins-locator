@@ -4,7 +4,7 @@ Tags: woocommerce, store locator, store finder, locations, shortcode
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.1.8
+Stable tag: 1.1.9
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -32,6 +32,7 @@ Source and issues: [github.com/wppoland/plogins-locator](https://github.com/wppo
 * Each location keeps its address, city, postcode, country, phone, email and opening hours, plus a photo and a description.
 * The `[locator]` shortcode renders the directory; you can leave the search box off if you only have a couple of shops.
 * The directory renders 200 stores by default; `[locator limit="500"]` raises it and `[locator limit="-1"]` renders every store.
+* When the page lists fewer locations than you have, it says so above the list ("Showing 200 of 700 locations"), and says that the search box only reaches the ones listed.
 * Search runs client-side over name, address, city, postcode and country. No request is sent while typing.
 * Per-card display toggles for photo, description, address, opening hours, phone and email (the store name always shows).
 * The result count is announced through an ARIA live region, the search field is keyboard-operable, and cards use focus-visible outlines.
@@ -98,6 +99,10 @@ Every location is stored on your own server as a `locator_store` post, with its 
 Plogins Locator is fully translatable and ships the `plogins-locator.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.9 =
+* Fixed: the directory announced how many locations it had printed, not how many the shop has. Since 1.1.8 the page renders 200 by default, so a shop with 700 locations told every visitor, and read out to every screen reader, "200 locations". The count now reads "Showing 200 of 700 locations", and a shop whose locations all fit on the page reads exactly as before.
+* Fixed: the search box only ever looked through the locations printed on the page, and nothing said so. A visitor searching for the 500th location was told "No locations match your search" and given no reason. The page now states above the list that it is showing the first 200 of 700 and that search covers only those, and the empty result says it again.
 
 = 1.1.8 =
 * Fixed: the directory rendered every published store on the page. The shortcode ignored its attributes entirely, so there was no way to ask for fewer, and a shop with a long franchise list built every store, and a separate photo lookup per store, into one public page. `[locator]` now renders 200 stores and honours `limit`, including `limit="-1"` for all of them, and the store photos are primed in one pass for the whole page instead of a lookup per store.

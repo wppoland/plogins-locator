@@ -28,6 +28,15 @@
 
     var total = items.length;
     var countTemplate = count ? count.textContent : '';
+    // Present only when the page lists fewer locations than the shop has, where
+    // the unfiltered text reads "Showing 200 of 700 locations" and prefixing it
+    // with a match count would read as three unrelated numbers.
+    var filteredLabel = count ? count.getAttribute('data-locator-filtered-label') : null;
+    // A translation that lost the placeholder would leave the count with no
+    // number in it, so fall back to the plain form rather than trust it.
+    if (filteredLabel && filteredLabel.indexOf('%d') === -1) {
+      filteredLabel = null;
+    }
 
     function updateCount(visible) {
       if (!count) {
@@ -36,6 +45,8 @@
       // Replace the leading number in the original "%d location(s)" string.
       if (visible === total) {
         count.textContent = countTemplate;
+      } else if (filteredLabel) {
+        count.textContent = filteredLabel.replace('%d', String(visible));
       } else {
         count.textContent = String(visible) + ' / ' + countTemplate;
       }
