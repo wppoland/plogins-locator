@@ -1,10 +1,10 @@
-=== Plogins Locator - Store Locator for WooCommerce ===
+=== Lokilo - Store Locator for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, store locator, store finder, locations, shortcode
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.1.9
+Stable tag: 1.2.0
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -13,36 +13,33 @@ Show your physical store locations with a searchable, accessible list customers 
 
 == Description ==
 
-Locator lists your physical shops on the storefront. You enter each location once
-in wp-admin (name, address, city, postcode, country, phone, email, opening hours,
-a photo and a description), then
-add the `[locator]` shortcode to any page to print a searchable directory.
+Lokilo lists your physical shops on the storefront. You enter each location once in wp-admin, name, address, city, postcode, country, phone, email, opening hours, a photo and a description, then drop the `[locator]` shortcode on any page and the directory prints.
 
-There is no map and no external service. No Google Maps key, no API call, no
-tracking script. Every location is printed in the page HTML, so the directory is
-visible even with JavaScript turned off. When JavaScript runs, the search box hides
-and shows cards as the visitor types, filtering by city, postcode or store name
-entirely in the browser.
+= No map, and that is the point =
 
-Source and issues: [github.com/wppoland/plogins-locator](https://github.com/wppoland/plogins-locator)
+There is no Google Maps key to get, no API to pay for, no third-party script and nothing sent anywhere. A store locator that needs a billing account and a key with a quota is a store locator that breaks quietly the month someone forgets to pay it.
 
-**Features**
+Every location is printed into the page HTML, so the directory is there with JavaScript turned off, and it is there for a search engine reading the page. When JavaScript does run, the search box filters the cards as the visitor types, over name, address, city, postcode and country, without a single request.
 
-* Store Locations live as their own post type under the WooCommerce menu.
-* Each location keeps its address, city, postcode, country, phone, email and opening hours, plus a photo and a description.
-* The `[locator]` shortcode renders the directory; you can leave the search box off if you only have a couple of shops.
-* The directory renders 200 stores by default; `[locator limit="500"]` raises it and `[locator limit="-1"]` renders every store.
-* When the page lists fewer locations than you have, it says so above the list ("Showing 200 of 700 locations"), and says that the search box only reaches the ones listed.
-* Search runs client-side over name, address, city, postcode and country. No request is sent while typing.
-* Per-card display toggles for photo, description, address, opening hours, phone and email (the store name always shows).
-* The result count is announced through an ARIA live region, the search field is keyboard-operable, and cards use focus-visible outlines.
-* Stylesheet and script load only on pages where the shortcode actually rendered, and the markup avoids layout shift.
-* Storefront styles follow the visitor's light/dark preference and honour prefers-reduced-motion.
-* On WordPress 6.9 and newer, an AI assistant in wp-admin can list your locations, look one up and read the directory settings, through the WordPress Abilities API. Reading only; it cannot add or change a location.
+= What you get =
+
+* **Locations as their own admin screen.** Store Locations sits under the WooCommerce menu, with a photo, a description and the full contact block per shop.
+* **One shortcode.** `[locator]` renders the directory. `[locator limit="500"]` raises the 200-store default and `[locator limit="-1"]` prints every one.
+* **An honest count.** When the page shows fewer locations than you have, it says so above the list, and says the search box only reaches the ones shown, rather than letting a visitor conclude you have no shop in their city.
+* **Per-card control.** Photo, description, address, opening hours, phone and email each have a toggle. The store name always shows.
+* **Accessible by construction.** The result count goes through an ARIA live region, the search field is keyboard-operable, cards carry focus-visible outlines, and the storefront styles follow the visitor's light or dark preference and honour prefers-reduced-motion.
+* **Loads nothing it does not need.** The stylesheet and script are enqueued only on a page where the shortcode actually rendered, and the markup is written to avoid layout shift.
+* **Readable by an assistant.** On WordPress 6.9 and newer an AI assistant in wp-admin can list your locations, look one up and read the directory settings, through the WordPress Abilities API. Reading only: it cannot add or change anything.
+
+= What it does not do =
+
+There is no map view, no driving directions and no geolocation of the visitor, because all three need a paid map provider. If you need a pin on a map, this is not the plugin.
+
+It does not import in bulk. Locations are added one at a time in wp-admin.
 
 == Installation ==
 
-1. Upload the plugin to `/wp-content/plugins/locator`, or install via Plugins > Add New.
+1. Upload the plugin to `/wp-content/plugins/lokilo`, or install via Plugins > Add New.
 2. Activate it. WooCommerce must be active.
 3. Go to WooCommerce > Store Locations and add your stores.
 4. Configure WooCommerce > Store Locator (search box and visible fields).
@@ -85,8 +82,8 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 
 == Screenshots ==
 
-1. The searchable storefront directory.
-2. The Store Locator settings page.
+1. The storefront directory: every location in the page, filtered as the visitor types.
+2. The settings screen: the search box, and which fields each card shows.
 
 == External Services ==
 
@@ -99,6 +96,9 @@ Every location is stored on your own server as a `locator_store` post, with its 
 Plogins Locator is fully translatable and ships the `plogins-locator.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.2.0 =
+* Renamed to Lokilo. The WordPress.org review team asks a plugin name to lead with a distinctive, coined identifier rather than a generic descriptive word. Lokilo is Esperanto for a locating tool. The text domain follows the name; the stored locations, the settings, the [locator] shortcode and every hook are unchanged.
 
 = 1.1.9 =
 * Fixed: the directory announced how many locations it had printed, not how many the shop has. Since 1.1.8 the page renders 200 by default, so a shop with 700 locations told every visitor, and read out to every screen reader, "200 locations". The count now reads "Showing 200 of 700 locations", and a shop whose locations all fit on the page reads exactly as before.

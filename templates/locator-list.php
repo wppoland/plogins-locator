@@ -49,7 +49,7 @@ $locator_item_partial = __DIR__ . '/partials/locator-store-item.php';
         <?php if ($locator_show_search) : ?>
             <div class="locator__search">
                 <label for="<?php echo esc_attr($locator_input_id); ?>" class="locator__search-label">
-                    <?php esc_html_e('Find a store', 'plogins-locator'); ?>
+                    <?php esc_html_e('Find a store', 'lokilo'); ?>
                 </label>
                 <input
                     type="search"
@@ -57,7 +57,7 @@ $locator_item_partial = __DIR__ . '/partials/locator-store-item.php';
                     class="locator__search-input"
                     data-locator-search
                     autocomplete="off"
-                    placeholder="<?php esc_attr_e('Search by city, postcode or name…', 'plogins-locator'); ?>"
+                    placeholder="<?php esc_attr_e('Search by city, postcode or name…', 'lokilo'); ?>"
                     aria-describedby="<?php echo esc_attr($locator_count_id); ?>" />
                 <p
                     id="<?php echo esc_attr($locator_count_id); ?>"
@@ -68,7 +68,7 @@ $locator_item_partial = __DIR__ . '/partials/locator-store-item.php';
                     echo esc_attr(
                         sprintf(
                             /* translators: 1: a %d placeholder the browser replaces with the number of matches, 2: number of locations listed on this page. */
-                            __('%1$s of %2$d listed locations match', 'plogins-locator'),
+                            __('%1$s of %2$d listed locations match', 'lokilo'),
                             '%d',
                             $locator_listed,
                         )
@@ -81,26 +81,26 @@ $locator_item_partial = __DIR__ . '/partials/locator-store-item.php';
                     if ($locator_truncated) {
                         printf(
                             /* translators: 1: number of locations listed on this page, 2: total number of locations. */
-                            esc_html__('Showing %1$d of %2$d locations', 'plogins-locator'),
+                            esc_html__('Showing %1$d of %2$d locations', 'lokilo'),
                             (int) $locator_listed,
                             (int) $locator_total,
                         );
                     } else {
                         printf(
                             /* translators: %d: number of store locations. */
-                            esc_html(_n('%d location', '%d locations', $locator_listed, 'plogins-locator')),
+                            esc_html(_n('%d location', '%d locations', $locator_listed, 'lokilo')),
                             (int) $locator_listed,
                         );
                     }
                     ?>
                 </p>
                 <p class="locator__noresults" data-locator-noresults hidden>
-                    <?php esc_html_e('No locations match your search.', 'plogins-locator'); ?>
+                    <?php esc_html_e('No locations match your search.', 'lokilo'); ?>
                     <?php
                     if ($locator_truncated) {
                         printf(
                             /* translators: 1: number of locations listed on this page, 2: total number of locations. */
-                            esc_html__('This search covered only the %1$d locations listed here, out of %2$d.', 'plogins-locator'),
+                            esc_html__('This search covered only the %1$d locations listed here, out of %2$d.', 'lokilo'),
                             (int) $locator_listed,
                             (int) $locator_total,
                         );
@@ -115,14 +115,14 @@ $locator_item_partial = __DIR__ . '/partials/locator-store-item.php';
                 <?php
                 printf(
                     /* translators: 1: number of locations listed on this page, 2: total number of locations. */
-                    esc_html__('This page lists the first %1$d of %2$d locations.', 'plogins-locator'),
+                    esc_html__('This page lists the first %1$d of %2$d locations.', 'lokilo'),
                     (int) $locator_listed,
                     (int) $locator_total,
                 );
 
                 if ($locator_show_search) {
                     echo ' ';
-                    esc_html_e('The search box only looks through the locations listed here.', 'plogins-locator');
+                    esc_html_e('The search box only looks through the locations listed here.', 'lokilo');
                 }
                 ?>
             </p>

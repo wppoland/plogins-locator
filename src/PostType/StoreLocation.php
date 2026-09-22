@@ -31,7 +31,7 @@ final class StoreLocation implements HasHooks
 
     /**
      * Latitude / longitude. Optional; populated by the store editor so add-ons
-     * (e.g. Locator Pro's map) can place each location on a map. Stored as plain
+     * (e.g. Lokilo Pro's map) can place each location on a map. Stored as plain
      * decimal-degree strings and read back as nullable floats.
      */
     public const META_LAT = '_locator_lat';
@@ -66,18 +66,18 @@ final class StoreLocation implements HasHooks
             self::POST_TYPE,
             [
                 'labels'              => [
-                    'name'               => __('Store Locations', 'plogins-locator'),
-                    'singular_name'      => __('Store Location', 'plogins-locator'),
-                    'menu_name'          => __('Store Locations', 'plogins-locator'),
-                    'add_new'            => __('Add Location', 'plogins-locator'),
-                    'add_new_item'       => __('Add Store Location', 'plogins-locator'),
-                    'new_item'           => __('New Store Location', 'plogins-locator'),
-                    'edit_item'          => __('Edit Store Location', 'plogins-locator'),
-                    'view_item'          => __('View Store Location', 'plogins-locator'),
-                    'all_items'          => __('Store Locations', 'plogins-locator'),
-                    'search_items'       => __('Search store locations', 'plogins-locator'),
-                    'not_found'          => __('No store locations found.', 'plogins-locator'),
-                    'not_found_in_trash' => __('No store locations in Trash.', 'plogins-locator'),
+                    'name'               => __('Store Locations', 'lokilo'),
+                    'singular_name'      => __('Store Location', 'lokilo'),
+                    'menu_name'          => __('Store Locations', 'lokilo'),
+                    'add_new'            => __('Add Location', 'lokilo'),
+                    'add_new_item'       => __('Add Store Location', 'lokilo'),
+                    'new_item'           => __('New Store Location', 'lokilo'),
+                    'edit_item'          => __('Edit Store Location', 'lokilo'),
+                    'view_item'          => __('View Store Location', 'lokilo'),
+                    'all_items'          => __('Store Locations', 'lokilo'),
+                    'search_items'       => __('Search store locations', 'lokilo'),
+                    'not_found'          => __('No store locations found.', 'lokilo'),
+                    'not_found_in_trash' => __('No store locations in Trash.', 'lokilo'),
                 ],
                 'public'              => false,
                 'show_ui'             => true,
@@ -123,8 +123,8 @@ final class StoreLocation implements HasHooks
 
         foreach ($columns as $key => $label) {
             if ('date' === $key) {
-                $reordered['locator_city']  = __('City', 'plogins-locator');
-                $reordered['locator_phone'] = __('Phone', 'plogins-locator');
+                $reordered['locator_city']  = __('City', 'lokilo');
+                $reordered['locator_phone'] = __('Phone', 'lokilo');
             }
 
             $reordered[$key] = $label;
@@ -154,7 +154,7 @@ final class StoreLocation implements HasHooks
     {
         add_meta_box(
             'locator_store_details',
-            __('Location details', 'plogins-locator'),
+            __('Location details', 'lokilo'),
             [$this, 'renderMetaBox'],
             self::POST_TYPE,
             'normal',
@@ -167,15 +167,15 @@ final class StoreLocation implements HasHooks
         wp_nonce_field(self::NONCE_ACTION, self::NONCE_FIELD);
 
         $fields = [
-            self::META_ADDRESS  => [__('Street address', 'plogins-locator'), 'textarea'],
-            self::META_CITY     => [__('City', 'plogins-locator'), 'text'],
-            self::META_POSTCODE => [__('Postcode / ZIP', 'plogins-locator'), 'text'],
-            self::META_COUNTRY  => [__('Country', 'plogins-locator'), 'text'],
-            self::META_PHONE    => [__('Phone', 'plogins-locator'), 'text'],
-            self::META_EMAIL    => [__('Email', 'plogins-locator'), 'text'],
-            self::META_LAT      => [__('Latitude', 'plogins-locator'), 'text'],
-            self::META_LNG      => [__('Longitude', 'plogins-locator'), 'text'],
-            self::META_HOURS    => [__('Opening hours', 'plogins-locator'), 'textarea'],
+            self::META_ADDRESS  => [__('Street address', 'lokilo'), 'textarea'],
+            self::META_CITY     => [__('City', 'lokilo'), 'text'],
+            self::META_POSTCODE => [__('Postcode / ZIP', 'lokilo'), 'text'],
+            self::META_COUNTRY  => [__('Country', 'lokilo'), 'text'],
+            self::META_PHONE    => [__('Phone', 'lokilo'), 'text'],
+            self::META_EMAIL    => [__('Email', 'lokilo'), 'text'],
+            self::META_LAT      => [__('Latitude', 'lokilo'), 'text'],
+            self::META_LNG      => [__('Longitude', 'lokilo'), 'text'],
+            self::META_HOURS    => [__('Opening hours', 'lokilo'), 'textarea'],
         ];
         ?>
         <table class="form-table locator-meta" role="presentation">
@@ -194,7 +194,7 @@ final class StoreLocation implements HasHooks
                                 name="<?php echo esc_attr($metaKey); ?>"><?php echo esc_textarea($value); ?></textarea>
                             <?php if (self::META_HOURS === $metaKey) : ?>
                                 <p class="description">
-                                    <?php esc_html_e('One line per day, e.g. "Mon, Fri: 9:00-18:00".', 'plogins-locator'); ?>
+                                    <?php esc_html_e('One line per day, e.g. "Mon, Fri: 9:00-18:00".', 'lokilo'); ?>
                                 </p>
                             <?php endif; ?>
                         <?php else : ?>
@@ -204,7 +204,7 @@ final class StoreLocation implements HasHooks
                                 value="<?php echo esc_attr($value); ?>" />
                             <?php if (self::META_LNG === $metaKey) : ?>
                                 <p class="description">
-                                    <?php esc_html_e('Optional. Enter latitude and longitude as decimal degrees (e.g. 52.2297, 21.0122) to place this location on a map.', 'plogins-locator'); ?>
+                                    <?php esc_html_e('Optional. Enter latitude and longitude as decimal degrees (e.g. 52.2297, 21.0122) to place this location on a map.', 'lokilo'); ?>
                                 </p>
                             <?php endif; ?>
                         <?php endif; ?>

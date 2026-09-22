@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plogins Locator - Store Locator for WooCommerce 1.1.9\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/plogins-locator\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lokilo\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -12,40 +12,40 @@ msgstr ""
 "POT-Creation-Date: 2026-09-13T12:35:07+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: plogins-locator\n"
+"X-Domain: lokilo\n"
 
 #. Plugin Name of the plugin
-#: plogins-locator.php
+#: lokilo.php
 msgid "Plogins Locator - Store Locator for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin
-#: plogins-locator.php
-msgid "https://plogins.com/plogins-locator/"
+#: lokilo.php
+msgid "https://plogins.com/lokilo/"
 msgstr ""
 
 #. Description of the plugin
-#: plogins-locator.php
+#: lokilo.php
 msgid "Show your physical store locations with a searchable list customers can filter by area."
 msgstr ""
 
 #. Author of the plugin
-#: plogins-locator.php
+#: lokilo.php
 msgid "WPPoland.com"
 msgstr ""
 
 #. Author URI of the plugin
-#: plogins-locator.php
+#: lokilo.php
 msgid "https://wppoland.com"
 msgstr ""
 
 #. translators: 1: Required PHP version, 2: Current PHP version
-#: plogins-locator.php:56
+#: lokilo.php:56
 #, php-format
 msgid "Locator requires PHP %1$s or higher. You are running PHP %2$s."
 msgstr ""
 
-#: plogins-locator.php:75
+#: lokilo.php:75
 msgid "Locator requires WooCommerce to be installed and activated."
 msgstr ""
 

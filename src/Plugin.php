@@ -52,7 +52,7 @@ final class Plugin
 
         /**
          * Fires after the FREE plugin has fully booted and all of its services
-         * are registered. Add-ons (e.g. Locator Pro) hook this to extend the
+         * are registered. Add-ons (e.g. Lokilo Pro) hook this to extend the
          * shared container and register their own services.
          *
          * @param Plugin $plugin The booted plugin instance.

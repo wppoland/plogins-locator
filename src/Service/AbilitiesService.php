@@ -52,13 +52,13 @@ final class AbilitiesService implements HasHooks
         }
 
         wp_register_ability_category('locator-stores', [
-            'label'       => __('Locator: store locations', 'plogins-locator'),
-            'description' => __('Physical store locations with their address, contact details and opening hours.', 'plogins-locator'),
+            'label'       => __('Lokilo: store locations', 'lokilo'),
+            'description' => __('Physical store locations with their address, contact details and opening hours.', 'lokilo'),
         ]);
 
         wp_register_ability_category('locator-settings', [
-            'label'       => __('Locator: directory settings', 'plogins-locator'),
-            'description' => __('How the storefront directory is configured: search box and visible card fields.', 'plogins-locator'),
+            'label'       => __('Lokilo: directory settings', 'lokilo'),
+            'description' => __('How the storefront directory is configured: search box and visible card fields.', 'lokilo'),
         ]);
     }
 
@@ -76,8 +76,8 @@ final class AbilitiesService implements HasHooks
     private function registerListStores(): void
     {
         wp_register_ability('locator/list-stores', [
-            'label'       => __('List store locations', 'plogins-locator'),
-            'description' => __('Returns published store locations with address, contact details and opening hours. An optional search term matches the same name, address, city, postcode and country text the storefront search box filters on.', 'plogins-locator'),
+            'label'       => __('List store locations', 'lokilo'),
+            'description' => __('Returns published store locations with address, contact details and opening hours. An optional search term matches the same name, address, city, postcode and country text the storefront search box filters on.', 'lokilo'),
             'category'    => 'locator-stores',
             'input_schema' => [
                 'type'       => 'object',
@@ -125,8 +125,8 @@ final class AbilitiesService implements HasHooks
     private function registerGetStore(): void
     {
         wp_register_ability('locator/get-store', [
-            'label'       => __('Get a store location', 'plogins-locator'),
-            'description' => __('Returns one published store location by its ID, with address, contact details and opening hours.', 'plogins-locator'),
+            'label'       => __('Get a store location', 'lokilo'),
+            'description' => __('Returns one published store location by its ID, with address, contact details and opening hours.', 'lokilo'),
             'category'    => 'locator-stores',
             'input_schema' => [
                 'type'       => 'object',
@@ -162,8 +162,8 @@ final class AbilitiesService implements HasHooks
     private function registerGetDirectorySettings(): void
     {
         wp_register_ability('locator/get-directory-settings', [
-            'label'       => __('Get directory settings', 'plogins-locator'),
-            'description' => __('Returns whether the storefront search box is shown and which detail fields appear on each store card.', 'plogins-locator'),
+            'label'       => __('Get directory settings', 'lokilo'),
+            'description' => __('Returns whether the storefront search box is shown and which detail fields appear on each store card.', 'lokilo'),
             'category'    => 'locator-settings',
             'input_schema' => ['type' => 'object', 'properties' => []],
             'output_schema' => [

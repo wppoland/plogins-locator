@@ -71,8 +71,8 @@ final class Settings implements HasHooks
     {
         add_submenu_page(
             'woocommerce',
-            __('Locator: Store Locator', 'plogins-locator'),
-            __('Store Locator', 'plogins-locator'),
+            __('Lokilo: store locator', 'lokilo'),
+            __('Store Locator', 'lokilo'),
             'manage_woocommerce',
             self::PAGE,
             [$this, 'renderPage'],
@@ -108,28 +108,28 @@ final class Settings implements HasHooks
 
         $fieldLabels = [
             'photo'       => [
-                'label' => __('Store photo', 'plogins-locator'),
-                'help'  => __('Shows the featured image you set on the location, at the top of its card.', 'plogins-locator'),
+                'label' => __('Store photo', 'lokilo'),
+                'help'  => __('Shows the featured image you set on the location, at the top of its card.', 'lokilo'),
             ],
             'description' => [
-                'label' => __('Description', 'plogins-locator'),
-                'help'  => __('Prints the text you wrote in the location editor, under the store name.', 'plogins-locator'),
+                'label' => __('Description', 'lokilo'),
+                'help'  => __('Prints the text you wrote in the location editor, under the store name.', 'lokilo'),
             ],
             'address'     => [
-                'label' => __('Address', 'plogins-locator'),
-                'help'  => __('Adds the street, postcode, city and country block to each card.', 'plogins-locator'),
+                'label' => __('Address', 'lokilo'),
+                'help'  => __('Adds the street, postcode, city and country block to each card.', 'lokilo'),
             ],
             'hours'       => [
-                'label' => __('Opening hours', 'plogins-locator'),
-                'help'  => __('Shows the hours you entered for the store, so customers know when to visit.', 'plogins-locator'),
+                'label' => __('Opening hours', 'lokilo'),
+                'help'  => __('Shows the hours you entered for the store, so customers know when to visit.', 'lokilo'),
             ],
             'phone'       => [
-                'label' => __('Phone', 'plogins-locator'),
-                'help'  => __('Shows a click-to-call number, tapping it dials the store on mobile.', 'plogins-locator'),
+                'label' => __('Phone', 'lokilo'),
+                'help'  => __('Shows a click-to-call number, tapping it dials the store on mobile.', 'lokilo'),
             ],
             'email'       => [
-                'label' => __('Email', 'plogins-locator'),
-                'help'  => __('Shows the store email as a click-to-write link, next to the phone number.', 'plogins-locator'),
+                'label' => __('Email', 'lokilo'),
+                'help'  => __('Shows the store email as a click-to-write link, next to the phone number.', 'lokilo'),
             ],
         ];
         ?>
@@ -139,15 +139,15 @@ final class Settings implements HasHooks
             <?php $this->proUpsell()->banner(); ?>
 
             <div class="locator-intro">
-                <h2><?php esc_html_e('Show customers where to find you', 'plogins-locator'); ?></h2>
+                <h2><?php esc_html_e('Show customers where to find you', 'lokilo'); ?></h2>
                 <p>
-                    <?php esc_html_e('Add your physical stores under WooCommerce > Store Locations, then place the shortcode below on any page to render a searchable, accessible directory your customers can filter by city, postcode or name.', 'plogins-locator'); ?>
+                    <?php esc_html_e('Add your physical stores under WooCommerce > Store Locations, then place the shortcode below on any page to render a searchable, accessible directory your customers can filter by city, postcode or name.', 'lokilo'); ?>
                 </p>
                 <p class="locator-shortcode-hint">
                     <?php
                     printf(
                         /* translators: %s: the [locator] shortcode wrapped in <code>. */
-                        esc_html__('Add the %s shortcode to a page to display your locations.', 'plogins-locator'),
+                        esc_html__('Add the %s shortcode to a page to display your locations.', 'lokilo'),
                         '<code>[locator]</code>',
                     );
                     ?>
@@ -159,23 +159,23 @@ final class Settings implements HasHooks
                 <?php settings_fields(self::GROUP); ?>
 
                 <div class="locator-card">
-                    <h2 class="locator-card__title"><?php esc_html_e('Search', 'plogins-locator'); ?></h2>
+                    <h2 class="locator-card__title"><?php esc_html_e('Search', 'lokilo'); ?></h2>
                     <p class="locator-card__intro">
-                        <?php esc_html_e('Help customers narrow a long list to the store nearest them.', 'plogins-locator'); ?>
+                        <?php esc_html_e('Help customers narrow a long list to the store nearest them.', 'lokilo'); ?>
                     </p>
                     <table class="form-table" role="presentation">
                         <tbody>
                             <tr>
-                                <th scope="row"><?php esc_html_e('Search box', 'plogins-locator'); ?></th>
+                                <th scope="row"><?php esc_html_e('Search box', 'lokilo'); ?></th>
                                 <td>
                                     <label for="locator_show_search">
                                         <input type="checkbox" id="locator_show_search"
                                             name="<?php echo esc_attr(self::OPTION); ?>[show_search]" value="1"
                                             <?php checked((bool) ($settings['show_search'] ?? true), true); ?> />
-                                        <?php esc_html_e('Show the search box above the results.', 'plogins-locator'); ?>
+                                        <?php esc_html_e('Show the search box above the results.', 'lokilo'); ?>
                                     </label>
                                     <p class="description">
-                                        <?php esc_html_e('Visitors filter locations as they type, by city, postcode or name. Filtering happens in the browser, so no data leaves the page. Leave off if you only list a handful of stores.', 'plogins-locator'); ?>
+                                        <?php esc_html_e('Visitors filter locations as they type, by city, postcode or name. Filtering happens in the browser, so no data leaves the page. Leave off if you only list a handful of stores.', 'lokilo'); ?>
                                     </p>
                                 </td>
                             </tr>
@@ -184,18 +184,18 @@ final class Settings implements HasHooks
                 </div>
 
                 <div class="locator-card">
-                    <h2 class="locator-card__title"><?php esc_html_e('Fields shown on each card', 'plogins-locator'); ?></h2>
+                    <h2 class="locator-card__title"><?php esc_html_e('Fields shown on each card', 'lokilo'); ?></h2>
                     <p class="locator-card__intro">
-                        <?php esc_html_e('The store name is always shown. Choose which extra details appear around it, the photo above and the rest beneath. Each one is only rendered when that store actually has a value.', 'plogins-locator'); ?>
+                        <?php esc_html_e('The store name is always shown. Choose which extra details appear around it, the photo above and the rest beneath. Each one is only rendered when that store actually has a value.', 'lokilo'); ?>
                     </p>
                     <table class="form-table" role="presentation">
                         <tbody>
                             <tr>
-                                <th scope="row"><?php esc_html_e('Visible fields', 'plogins-locator'); ?></th>
+                                <th scope="row"><?php esc_html_e('Visible fields', 'lokilo'); ?></th>
                                 <td>
                                     <fieldset>
                                         <legend class="screen-reader-text">
-                                            <?php esc_html_e('Visible fields', 'plogins-locator'); ?>
+                                            <?php esc_html_e('Visible fields', 'lokilo'); ?>
                                         </legend>
                                         <?php foreach ($fieldLabels as $key => $field) :
                                             $id = 'locator_field_' . sanitize_key($key);
@@ -219,7 +219,7 @@ final class Settings implements HasHooks
                     </table>
 
                     <div class="locator-preview" aria-hidden="true">
-                        <span class="locator-preview__label"><?php esc_html_e('Example card', 'plogins-locator'); ?></span>
+                        <span class="locator-preview__label"><?php esc_html_e('Example card', 'lokilo'); ?></span>
                         <div class="locator-preview__card">
                             <span class="locator-preview__pin">
                                 <svg viewBox="0 0 24 24" width="18" height="18" focusable="false" aria-hidden="true">
@@ -230,26 +230,26 @@ final class Settings implements HasHooks
                                 <?php if (! empty($fields['photo'])) : ?>
                                     <span class="locator-preview__photo"></span>
                                 <?php endif; ?>
-                                <strong class="locator-preview__name"><?php esc_html_e('Riverside Store', 'plogins-locator'); ?></strong>
+                                <strong class="locator-preview__name"><?php esc_html_e('Riverside Store', 'lokilo'); ?></strong>
                                 <?php if (! empty($fields['description'])) : ?>
-                                    <span class="locator-preview__line"><?php esc_html_e('Our oldest shop, on the water since 1998.', 'plogins-locator'); ?></span>
+                                    <span class="locator-preview__line"><?php esc_html_e('Our oldest shop, on the water since 1998.', 'lokilo'); ?></span>
                                 <?php endif; ?>
                                 <?php if (! empty($fields['address'])) : ?>
-                                    <span class="locator-preview__line"><?php esc_html_e('12 Mill Lane, EC1A 1BB London', 'plogins-locator'); ?></span>
+                                    <span class="locator-preview__line"><?php esc_html_e('12 Mill Lane, EC1A 1BB London', 'lokilo'); ?></span>
                                 <?php endif; ?>
                                 <?php if (! empty($fields['hours'])) : ?>
-                                    <span class="locator-preview__line"><?php esc_html_e('Mon, Sat 9:00-18:00', 'plogins-locator'); ?></span>
+                                    <span class="locator-preview__line"><?php esc_html_e('Mon, Sat 9:00-18:00', 'lokilo'); ?></span>
                                 <?php endif; ?>
                                 <?php if (! empty($fields['phone'])) : ?>
-                                    <span class="locator-preview__line locator-preview__line--accent"><?php esc_html_e('+44 20 7946 0000', 'plogins-locator'); ?></span>
+                                    <span class="locator-preview__line locator-preview__line--accent"><?php esc_html_e('+44 20 7946 0000', 'lokilo'); ?></span>
                                 <?php endif; ?>
                                 <?php if (! empty($fields['email'])) : ?>
-                                    <span class="locator-preview__line locator-preview__line--accent"><?php esc_html_e('riverside@example.com', 'plogins-locator'); ?></span>
+                                    <span class="locator-preview__line locator-preview__line--accent"><?php esc_html_e('riverside@example.com', 'lokilo'); ?></span>
                                 <?php endif; ?>
                             </div>
                         </div>
                         <p class="description locator-preview__note">
-                            <?php esc_html_e('A live page also adds your search box and shows every store that matches.', 'plogins-locator'); ?>
+                            <?php esc_html_e('A live page also adds your search box and shows every store that matches.', 'lokilo'); ?>
                         </p>
                     </div>
                 </div>
