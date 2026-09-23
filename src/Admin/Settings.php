@@ -72,7 +72,7 @@ final class Settings implements HasHooks
         add_submenu_page(
             'woocommerce',
             __('Lokilo: store locator', 'lokilo'),
-            __('Store Locator', 'lokilo'),
+            __('Lokilo', 'lokilo'),
             'manage_woocommerce',
             self::PAGE,
             [$this, 'renderPage'],
@@ -146,9 +146,9 @@ final class Settings implements HasHooks
                 <p class="locator-shortcode-hint">
                     <?php
                     printf(
-                        /* translators: %s: the [locator] shortcode wrapped in <code>. */
+                        /* translators: %s: the [lokilo] shortcode wrapped in <code>. */
                         esc_html__('Add the %s shortcode to a page to display your locations.', 'lokilo'),
-                        '<code>[locator]</code>',
+                        '<code>[lokilo]</code>',
                     );
                     ?>
                 </p>

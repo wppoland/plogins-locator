@@ -13,7 +13,7 @@ use WP_Post;
  * The custom post type that stores physical store locations.
  *
  * Locations are managed in wp-admin under the WooCommerce menu and surfaced on
- * the storefront via the [locator] shortcode. Each location keeps its address,
+ * the storefront via the [lokilo] shortcode. Each location keeps its address,
  * contact details and opening hours as post meta. All meta is sanitised on save
  * behind a nonce + manage_woocommerce capability check.
  */

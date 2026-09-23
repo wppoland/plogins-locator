@@ -25,8 +25,8 @@ return [
             'pl' => ['title' => 'Interaktywna mapa', 'desc' => 'Osadzona mapa z pinezkami dla każdej lokalizacji, oparta na współrzędnych obok przeszukiwalnej listy.'],
         ],
         [
-            'en' => ['title' => 'Region grouping', 'desc' => 'Group [locator] list entries by a Region (Pro) field, with country fallback for unlabelled stores.'],
-            'pl' => ['title' => 'Grupowanie po regionach', 'desc' => 'Grupuj lokalizacje po regionie lub kraju na liście [locator], aby duże katalogi pozostały czytelne.'],
+            'en' => ['title' => 'Region grouping', 'desc' => 'Group [lokilo] list entries by a Region (Pro) field, with country fallback for unlabelled stores.'],
+            'pl' => ['title' => 'Grupowanie po regionach', 'desc' => 'Grupuj lokalizacje po regionie lub kraju na liście [lokilo], aby duże katalogi pozostały czytelne.'],
         ],
         [
             'en' => ['title' => 'Bulk import', 'desc' => 'Import or update locations from CSV on WooCommerce > Store Locator Import instead of adding each store by hand.'],

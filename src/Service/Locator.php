@@ -14,7 +14,7 @@ use Locator\Util\TemplateLoader;
 use const Locator\VERSION;
 
 /**
- * Front-end service: registers the [locator] shortcode and renders an
+ * Front-end service: registers the [lokilo] shortcode and renders an
  * accessible, searchable directory of published store locations.
  *
  * Filtering is performed client-side (no AJAX, no external API): every store
@@ -26,7 +26,7 @@ use const Locator\VERSION;
  */
 final class Locator implements HasHooks
 {
-    /** Stores rendered by [locator] when the shortcode names no limit. */
+    /** Stores rendered by [lokilo] when the shortcode names no limit. */
     private const DEFAULT_LIMIT = 200;
 
     private bool $assetsNeeded = false;
@@ -40,7 +40,7 @@ final class Locator implements HasHooks
 
     public function registerHooks(): void
     {
-        add_shortcode('locator', [$this, 'renderShortcode']);
+        add_shortcode('lokilo', [$this, 'renderShortcode']);
         add_action('wp_enqueue_scripts', [$this, 'registerAssets']);
         add_action('wp_footer', [$this, 'enqueueIfNeeded']);
     }
@@ -115,7 +115,7 @@ final class Locator implements HasHooks
     }
 
     /**
-     * Render the [locator] shortcode.
+     * Render the [lokilo] shortcode.
      *
      * @param array<string, mixed>|string $atts
      */
@@ -126,18 +126,18 @@ final class Locator implements HasHooks
         $atts = shortcode_atts(
             ['limit' => ''],
             is_array($atts) ? $atts : [],
-            'locator',
+            'lokilo',
         );
 
         /**
-         * Filter how many stores [locator] renders when the shortcode names no
+         * Filter how many stores [lokilo] renders when the shortcode names no
          * limit. The directory is rendered server-side and filtered in the
          * browser, so every store on the page is a row read, a meta cache entry
          * and a card in the HTML. A shop with a handful of stores never reaches
          * this; one importing a franchise list would otherwise print all of
          * them into one public page.
          *
-         * `[locator limit="-1"]` still renders every store.
+         * `[lokilo limit="-1"]` still renders every store.
          *
          * @param int $limit Default number of stores rendered.
          */

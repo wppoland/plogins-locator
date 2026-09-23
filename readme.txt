@@ -4,7 +4,7 @@ Tags: woocommerce, store locator, store finder, locations, shortcode
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.2.1
+Stable tag: 1.2.3
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +13,7 @@ Show your physical store locations with a searchable, accessible list customers 
 
 == Description ==
 
-Lokilo lists your physical shops on the storefront. You enter each location once in wp-admin, name, address, city, postcode, country, phone, email, opening hours, a photo and a description, then drop the `[locator]` shortcode on any page and the directory prints.
+Lokilo lists your physical shops on the storefront. You enter each location once in wp-admin, name, address, city, postcode, country, phone, email, opening hours, a photo and a description, then drop the `[lokilo]` shortcode on any page and the directory prints.
 
 = No map, and that is the point =
 
@@ -24,7 +24,7 @@ Every location is printed into the page HTML, so the directory is there with Jav
 = What you get =
 
 * **Locations as their own admin screen.** Store Locations sits under the WooCommerce menu, with a photo, a description and the full contact block per shop.
-* **One shortcode.** `[locator]` renders the directory. `[locator limit="500"]` raises the 200-store default and `[locator limit="-1"]` prints every one.
+* **One shortcode.** `[lokilo]` renders the directory. `[lokilo limit="500"]` raises the 200-store default and `[lokilo limit="-1"]` prints every one.
 * **An honest count.** When the page shows fewer locations than you have, it says so above the list, and says the search box only reaches the ones shown, rather than letting a visitor conclude you have no shop in their city.
 * **Per-card control.** Photo, description, address, opening hours, phone and email each have a toggle. The store name always shows.
 * **Accessible by construction.** The result count goes through an ARIA live region, the search field is keyboard-operable, cards carry focus-visible outlines, and the storefront styles follow the visitor's light or dark preference and honour prefers-reduced-motion.
@@ -42,8 +42,8 @@ It does not import in bulk. Locations are added one at a time in wp-admin.
 1. Upload the plugin to `/wp-content/plugins/lokilo`, or install via Plugins > Add New.
 2. Activate it. WooCommerce must be active.
 3. Go to WooCommerce > Store Locations and add your stores.
-4. Configure WooCommerce > Store Locator (search box and visible fields).
-5. Add the `[locator]` shortcode to any page.
+4. Configure WooCommerce > Lokilo (search box and visible fields).
+5. Add the `[lokilo]` shortcode to any page.
 
 == Frequently Asked Questions ==
 
@@ -57,11 +57,11 @@ It does not import in bulk. Locations are added one at a time in wp-admin.
 
 = Does it require WooCommerce? =
 
-Yes. Locator registers under the WooCommerce menu and requires WooCommerce to be active.
+Yes. Lokilo registers under the WooCommerce menu and requires WooCommerce to be active.
 
 = Does it show a map? =
 
-No. Locator renders a searchable list of cards, not a map, so it needs no map key or external service. You can still store latitude and longitude per location for use by an add-on.
+No. Lokilo renders a searchable list of cards, not a map, so it needs no map key or external service. You can still store latitude and longitude per location for use by an add-on.
 
 = Which details can I show on each card? =
 
@@ -69,11 +69,11 @@ The store name is always shown. You can toggle the store photo, the description,
 
 = How does the search box work? =
 
-The `[locator]` shortcode filters location cards client-side as the shopper types.
+The `[lokilo]` shortcode filters location cards client-side as the shopper types.
 
 = Can I add stores without custom code? =
 
-Yes. Add locations under **WooCommerce > Store Locations** and place `[locator]` on any page.
+Yes. Add locations under **WooCommerce > Store Locations** and place `[lokilo]` on any page.
 
 
 = Does this plugin work on WordPress Multisite? =
@@ -87,15 +87,22 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 
 == External Services ==
 
-Locator does not connect to any external service. It registers no remote API, sends no HTTP request, and loads no third-party script, font, map or tile. Your store data never leaves your site.
+Lokilo does not connect to any external service. It registers no remote API, sends no HTTP request, and loads no third-party script, font, map or tile. Your store data never leaves your site.
 
 Every location is stored on your own server as a `locator_store` post, with its address, city, postcode, country, phone, opening hours, email and any latitude/longitude kept in that post's meta. Settings live in the `locator_settings` option. Coordinates are typed in by hand on the location screen - nothing is geocoded against an outside provider. The storefront search filters cards in the visitor's browser, so no request is made while typing, and the plugin sends no email.
 
 == Translations ==
 
-Plogins Locator is fully translatable and ships the `plogins-locator.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
+Lokilo is fully translatable and ships the `lokilo.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.2.3 =
+* Fixed: the PRO promo card on the settings screen still told merchants to use `[locator]`, the shortcode the previous release replaced, so it was handing out an instruction that no longer works.
+
+= 1.2.2 =
+* The shortcode is now `[lokilo]`. It used to be `[locator]`, a tag generic enough that any other plugin could claim it first, and which no longer matched the plugin's name. This is the last release in which that could change without breaking existing pages, because the plugin had not been published yet.
+* The WooCommerce submenu now reads Lokilo rather than Store Locator, and the places the documentation still said Locator were updated.
 
 = 1.2.1 =
 * The sidebar upgrade promo now follows the same dismissal as the banner. Dismissing the banner used to leave a full-height advert on the settings screen for good, which is not what the WordPress.org guideline on upgrade prompts means by used with moderation.

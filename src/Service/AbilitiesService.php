@@ -16,7 +16,7 @@ use Locator\Repository\StoreRepository;
  *
  * Each ability is a stable, namespaced contract: a structured way for the
  * command palette, MCP servers and AI assistants to read the same location data
- * the [locator] shortcode prints, and to add or update a location the same way
+ * the [lokilo] shortcode prints, and to add or update a location the same way
  * the programmatic importer does.
  *
  * On WordPress < 6.9 this service no-ops (the API is detected at runtime and

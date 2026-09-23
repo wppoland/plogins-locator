@@ -2,26 +2,26 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Plogins Locator - Store Locator for WooCommerce 1.1.9\n"
+"Project-Id-Version: Lokilo - Store Locator for WooCommerce 1.2.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lokilo\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-13T12:35:07+00:00\n"
+"POT-Creation-Date: 2026-09-23T07:52:54+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: lokilo\n"
 
 #. Plugin Name of the plugin
 #: lokilo.php
-msgid "Plogins Locator - Store Locator for WooCommerce"
+msgid "Lokilo - Store Locator for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin
 #: lokilo.php
-msgid "https://plogins.com/lokilo/"
+msgid "https://plogins.com/plogins-locator/"
 msgstr ""
 
 #. Description of the plugin
@@ -42,11 +42,11 @@ msgstr ""
 #. translators: 1: Required PHP version, 2: Current PHP version
 #: lokilo.php:56
 #, php-format
-msgid "Locator requires PHP %1$s or higher. You are running PHP %2$s."
+msgid "Lokilo requires PHP %1$s or higher. You are running PHP %2$s."
 msgstr ""
 
 #: lokilo.php:75
-msgid "Locator requires WooCommerce to be installed and activated."
+msgid "Lokilo requires WooCommerce to be installed and activated."
 msgstr ""
 
 #: src/Admin/ProUpsell.php:85
@@ -89,26 +89,26 @@ msgstr ""
 msgid "Dismiss this notice"
 msgstr ""
 
-#: src/Admin/ProUpsell.php:185
+#: src/Admin/ProUpsell.php:190
 msgid "Unlock every PRO feature"
 msgstr ""
 
-#: src/Admin/ProUpsell.php:198
+#: src/Admin/ProUpsell.php:203
 msgid "one licence, every PRO feature"
 msgstr ""
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:217
+#: src/Admin/ProUpsell.php:222
 #, php-format
 msgid "What %s adds"
 msgstr ""
 
 #: src/Admin/Settings.php:74
-msgid "Locator: Store Locator"
+msgid "Lokilo: store locator"
 msgstr ""
 
 #: src/Admin/Settings.php:75
-msgid "Store Locator"
+msgid "Lokilo"
 msgstr ""
 
 #: src/Admin/Settings.php:111
@@ -323,7 +323,7 @@ msgid "Optional. Enter latitude and longitude as decimal degrees (e.g. 52.2297, 
 msgstr ""
 
 #: src/Service/AbilitiesService.php:55
-msgid "Locator: store locations"
+msgid "Lokilo: store locations"
 msgstr ""
 
 #: src/Service/AbilitiesService.php:56
@@ -331,7 +331,7 @@ msgid "Physical store locations with their address, contact details and opening 
 msgstr ""
 
 #: src/Service/AbilitiesService.php:60
-msgid "Locator: directory settings"
+msgid "Lokilo: directory settings"
 msgstr ""
 
 #: src/Service/AbilitiesService.php:61
