@@ -174,7 +174,7 @@ msgstr "Zeigt die E-Mail-Adresse der Filiale als Click-to-Write-Link neben der T
 
 #: src/Admin/Settings.php:142
 msgid "Show customers where to find you"
-msgstr "Zeige deinen Kunden, wo sie Sie finden können"
+msgstr "Zeige deinen Kunden, wo sie dich finden können"
 
 #: src/Admin/Settings.php:144
 msgid ""
