@@ -31,7 +31,7 @@ msgstr "https://plogins.com/plogins-locator/"
 msgid ""
 "Show your physical store locations with a searchable list customers can "
 "filter by area."
-msgstr "Muestre las ubicaciones de sus tiendas físicas con una lista de búsqueda que los clientes pueden filtrar por área."
+msgstr "Muestra las ubicaciones de tus tiendas físicas con una lista de búsqueda que los clientes pueden filtrar por área."
 
 #. Author of the plugin
 #: lokilo.php
@@ -47,7 +47,7 @@ msgstr "https://wppoland.com"
 #: lokilo.php:56
 #, php-format
 msgid "Lokilo requires PHP %1$s or higher. You are running PHP %2$s."
-msgstr "Lokilo requiere PHP %1$s o superior. Está ejecutando PHP %2$s."
+msgstr "Lokilo requiere PHP %1$s o superior. Estás ejecutando PHP %2$s."
 
 #: lokilo.php:75
 msgid "Lokilo requires WooCommerce to be installed and activated."
@@ -122,7 +122,7 @@ msgstr "Foto de la tienda"
 #: src/Admin/Settings.php:112
 msgid ""
 "Shows the featured image you set on the location, at the top of its card."
-msgstr "Muestra la imagen destacada que asignó a la ubicación, en la parte superior de su tarjeta."
+msgstr "Muestra la imagen destacada que asignaste a la ubicación, en la parte superior de su tarjeta."
 
 #: src/Admin/Settings.php:115
 msgid "Description"
@@ -130,7 +130,7 @@ msgstr "Descripción"
 
 #: src/Admin/Settings.php:116
 msgid "Prints the text you wrote in the location editor, under the store name."
-msgstr "Muestra el texto que escribió en el editor de la ubicación, debajo del nombre de la tienda."
+msgstr "Muestra el texto que escribiste en el editor de la ubicación, debajo del nombre de la tienda."
 
 #: src/Admin/Settings.php:119
 msgid "Address"
@@ -184,16 +184,16 @@ msgid ""
 "shortcode below on any page to render a searchable, accessible directory "
 "your customers can filter by city, postcode or name."
 msgstr ""
-"Añade sus tiendas físicas en WooCommerce > Ubicaciones de tiendas, luego "
-"coloque el código corto a continuación en cualquier página para generar un "
-"directorio accesible y con capacidad de búsqueda que sus clientes puedan "
+"Añade tus tiendas físicas en WooCommerce > Ubicaciones de tiendas, luego "
+"coloca el código corto a continuación en cualquier página para generar un "
+"directorio accesible y con capacidad de búsqueda que tus clientes puedan "
 "filtrar por ciudad, código postal o nombre."
 
 #. translators: %s: the [locator] shortcode wrapped in <code>.
 #: src/Admin/Settings.php:150
 #, php-format
 msgid "Add the %s shortcode to a page to display your locations."
-msgstr "Añade el código corto %s a una página para mostrar sus ubicaciones."
+msgstr "Añade el código corto %s a una página para mostrar tus ubicaciones."
 
 #: src/Admin/Settings.php:162
 msgid "Search"
@@ -202,7 +202,7 @@ msgstr "Buscar"
 #: src/Admin/Settings.php:164
 msgid "Help customers narrow a long list to the store nearest them."
 msgstr ""
-"Ayude a los clientes a reducir una lista larga a la tienda más cercana."
+"Ayuda a los clientes a reducir una lista larga a la tienda más cercana."
 
 #: src/Admin/Settings.php:169
 msgid "Search box"
@@ -220,7 +220,7 @@ msgid ""
 msgstr ""
 "Los visitantes filtran ubicaciones a medida que escriben, por ciudad, código "
 "postal o nombre. El filtrado se realiza en el navegador, por lo que ningún "
-"dato sale de la página. Déjelo si solo incluye un puñado de tiendas."
+"dato sale de la página. Déjalo si solo incluyes un puñado de tiendas."
 
 #: src/Admin/Settings.php:187
 msgid "Fields shown on each card"
@@ -231,7 +231,7 @@ msgid ""
 "The store name is always shown. Choose which extra details appear around it, "
 "the photo above and the rest beneath. Each one is only rendered when that "
 "store actually has a value."
-msgstr "El nombre de la tienda siempre se muestra. Elija qué detalles adicionales aparecen a su alrededor: la foto encima y el resto debajo. Cada uno solo se representa cuando esa tienda realmente tiene un valor."
+msgstr "El nombre de la tienda siempre se muestra. Elige qué detalles adicionales aparecen a su alrededor: la foto encima y el resto debajo. Cada uno solo se representa cuando esa tienda realmente tiene un valor."
 
 #: src/Admin/Settings.php:194 src/Admin/Settings.php:198
 msgid "Visible fields"
@@ -268,7 +268,7 @@ msgstr "riverside@example.com"
 #: src/Admin/Settings.php:252
 msgid ""
 "A live page also adds your search box and shows every store that matches."
-msgstr "Una página en vivo también añade su cuadro de búsqueda y muestra todas las tiendas que coinciden."
+msgstr "Una página en vivo también añade tu cuadro de búsqueda y muestra todas las tiendas que coinciden."
 
 #: src/PostType/StoreLocation.php:69 src/PostType/StoreLocation.php:71
 #: src/PostType/StoreLocation.php:77
@@ -348,7 +348,7 @@ msgid ""
 "Optional. Enter latitude and longitude as decimal degrees (e.g. 52.2297, "
 "21.0122) to place this location on a map."
 msgstr ""
-"Opcional. Ingrese la latitud y la longitud como grados decimales (por "
+"Opcional. Introduce la latitud y la longitud como grados decimales (por "
 "ejemplo, 52.2297, 21.0122) para colocar esta ubicación en un mapa."
 
 #: src/Service/AbilitiesService.php:55
@@ -436,7 +436,7 @@ msgstr[1] "%d ubicaciones"
 
 #: templates/locator-list.php:98
 msgid "No locations match your search."
-msgstr "Ninguna ubicación coincide con su búsqueda."
+msgstr "Ninguna ubicación coincide con tu búsqueda."
 
 #. translators: 1: number of locations listed on this page, 2: total number of locations.
 #: templates/locator-list.php:103
