@@ -42,6 +42,15 @@ final class Store
             $this->country,
         ];
 
-        return strtolower(trim(implode(' ', array_filter($parts))));
+        return self::lower(trim(implode(' ', array_filter($parts))));
+    }
+
+    /**
+     * Lower-case UTF-8 text. strtolower() only folds A-Z, so "Łódź" kept its
+     * capital and never matched the query the browser lower-cases.
+     */
+    public static function lower(string $text): string
+    {
+        return function_exists('mb_strtolower') ? mb_strtolower($text, 'UTF-8') : strtolower($text);
     }
 }

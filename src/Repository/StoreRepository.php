@@ -52,6 +52,20 @@ final class StoreRepository
     }
 
     /**
+     * One published store by ID, or null.
+     */
+    public function find(int $id): ?Store
+    {
+        $post = $id > 0 ? get_post($id) : null;
+
+        if (! $post instanceof WP_Post || StoreLocation::POST_TYPE !== $post->post_type || 'publish' !== $post->post_status) {
+            return null;
+        }
+
+        return $this->hydrate($post);
+    }
+
+    /**
      * Count published stores.
      */
     public function count(): int
