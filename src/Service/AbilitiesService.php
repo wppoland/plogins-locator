@@ -81,6 +81,7 @@ final class AbilitiesService implements HasHooks
             'category'    => 'locator-stores',
             'input_schema' => [
                 'type'       => 'object',
+                'default'    => [],
                 'properties' => [
                     'search' => ['type' => ['string', 'null']],
                     'limit'  => ['type' => 'integer', 'minimum' => 1, 'maximum' => 500, 'default' => 100],
@@ -99,17 +100,20 @@ final class AbilitiesService implements HasHooks
             'execute_callback' => function (array $input): array {
                 $limit  = isset($input['limit']) ? (int) $input['limit'] : 100;
                 $limit  = max(1, min(500, $limit));
-                $search = isset($input['search']) ? strtolower(trim(sanitize_text_field((string) $input['search']))) : '';
+                $search = isset($input['search']) ? Store::lower(trim(sanitize_text_field((string) $input['search']))) : '';
 
-                $stores = $this->repository->all($limit);
-
-                if ('' !== $search) {
+                if ('' === $search) {
+                    $stores = $this->repository->all($limit);
+                } else {
                     // Same haystack the storefront cards carry, so an agent sees
                     // exactly what a shopper typing in the search box would.
-                    $stores = array_values(array_filter(
-                        $stores,
+                    // Filter before the limit, or a store past the first $limit
+                    // can never be found.
+                    // ponytail: hydrates every store for a search; admin-only, add a meta query if directories grow past a few thousand.
+                    $stores = array_slice(array_values(array_filter(
+                        $this->repository->all(),
                         static fn (Store $store): bool => str_contains($store->searchHaystack(), $search),
-                    ));
+                    )), 0, $limit);
                 }
 
                 return [
@@ -118,7 +122,7 @@ final class AbilitiesService implements HasHooks
                 ];
             },
             'permission_callback' => [$this, 'canManageStores'],
-            'meta' => ['show_in_rest' => true, 'readonly' => true],
+            'meta' => ['show_in_rest' => true, 'annotations' => ['readonly' => true, 'destructive' => false, 'idempotent' => true]],
         ]);
     }
 
@@ -143,18 +147,14 @@ final class AbilitiesService implements HasHooks
                 ],
             ],
             'execute_callback' => function (array $input): array {
-                $storeId = (int) ($input['store_id'] ?? 0);
+                $store = $this->repository->find((int) ($input['store_id'] ?? 0));
 
-                foreach ($this->repository->all() as $store) {
-                    if ($store->id === $storeId) {
-                        return ['found' => true, 'store' => $this->storeToArray($store)];
-                    }
-                }
-
-                return ['found' => false, 'store' => null];
+                return null === $store
+                    ? ['found' => false, 'store' => null]
+                    : ['found' => true, 'store' => $this->storeToArray($store)];
             },
             'permission_callback' => [$this, 'canManageStores'],
-            'meta' => ['show_in_rest' => true, 'readonly' => true],
+            'meta' => ['show_in_rest' => true, 'annotations' => ['readonly' => true, 'destructive' => false, 'idempotent' => true]],
         ]);
     }
 
@@ -165,7 +165,7 @@ final class AbilitiesService implements HasHooks
             'label'       => __('Get directory settings', 'lokilo'),
             'description' => __('Returns whether the storefront search box is shown and which detail fields appear on each store card.', 'lokilo'),
             'category'    => 'locator-settings',
-            'input_schema' => ['type' => 'object', 'properties' => []],
+            'input_schema' => ['type' => 'object', 'default' => [], 'properties' => []],
             'output_schema' => [
                 'type'       => 'object',
                 'properties' => [
@@ -188,7 +188,7 @@ final class AbilitiesService implements HasHooks
                 ];
             },
             'permission_callback' => [$this, 'canManageStores'],
-            'meta' => ['show_in_rest' => true, 'readonly' => true],
+            'meta' => ['show_in_rest' => true, 'annotations' => ['readonly' => true, 'destructive' => false, 'idempotent' => true]],
         ]);
     }
 

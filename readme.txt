@@ -4,7 +4,7 @@ Tags: woocommerce, store locator, store finder, locations, shortcode
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.2.5
+Stable tag: 1.2.6
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -96,6 +96,12 @@ Every location is stored on your own server as a `locator_store` post, with its 
 Lokilo is fully translatable and ships the `lokilo.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.2.6 =
+* Search now matches store names, cities and addresses with non-ASCII capitals (Łódź, Überlingen). The storefront box and the list-stores ability lower-cased only A to Z, so these stores never matched.
+* The read-only abilities are now flagged read-only where the Abilities API looks for it, so they are called with GET as the API expects for read-only abilities (GET used to return 405 and only POST worked). list-stores and get-directory-settings also accept a call with no input.
+* The list-stores ability searches every store before applying its limit, so a store past the first page can be found.
+* The get-store ability loads only the store it was asked for.
 
 = 1.2.5 =
 * The upgrade notice's "Coming soon" and "Get notified" labels are English source strings for every language; Polish sites used to get their own Polish source text, which translators in other languages then saw untranslated.
