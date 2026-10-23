@@ -4,36 +4,38 @@ Tags: woocommerce, store locator, store finder, locations, shortcode
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.2.6
+Stable tag: 1.3.1
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Show your physical store locations with a searchable, accessible list customers can filter by city, postcode or name.
+Help customers find your shops: a searchable list of your stores with opening hours, contact details and a Get directions link.
 
 == Description ==
 
-Lokilo lists your physical shops on the storefront. You enter each location once in wp-admin, name, address, city, postcode, country, phone, email, opening hours, a photo and a description, then drop the `[lokilo]` shortcode on any page and the directory prints.
+Lokilo lists your physical shops on the storefront. You enter each location once in wp-admin, name, address, city, postcode, country, phone, email, opening hours, a photo and a description, then drop the Store Locator block or the `[lokilo]` shortcode on any page and the directory prints.
 
 = No map, and that is the point =
 
 There is no Google Maps key to get, no API to pay for, no third-party script and nothing sent anywhere. A store locator that needs a billing account and a key with a quota is a store locator that breaks quietly the month someone forgets to pay it.
 
-Every location is printed into the page HTML, so the directory is there with JavaScript turned off, and it is there for a search engine reading the page. When JavaScript does run, the search box filters the cards as the visitor types, over name, address, city, postcode and country, without a single request.
+Every location is printed into the page HTML, so the directory is there with JavaScript turned off, and it is there for a search engine reading the page. When JavaScript does run, the search box filters the cards as the visitor types, over name, address, city, postcode and country, without a single request. Accents do not matter: "lodz" finds Łódź.
 
 = What you get =
 
 * **Locations as their own admin screen.** Store Locations sits under the WooCommerce menu, with a photo, a description and the full contact block per shop.
-* **One shortcode.** `[lokilo]` renders the directory. `[lokilo limit="500"]` raises the 200-store default and `[lokilo limit="-1"]` prints every one.
+* **A block and a shortcode.** The Store Locator block and `[lokilo]` render the same directory. `[lokilo limit="500"]` raises the 200-store default and `[lokilo limit="-1"]` prints every one.
+* **Search that ignores accents.** The search box filters cards over name, address, city, postcode and country as the visitor types, so "lodz" finds Łódź.
 * **An honest count.** When the page shows fewer locations than you have, it says so above the list, and says the search box only reaches the ones shown, rather than letting a visitor conclude you have no shop in their city.
+* **Directions on each card with an address.** A card with an address gets a Get directions link that opens OpenStreetMap in a new tab with the address filled in. It is a plain link: no key, no script, nothing loaded until the visitor clicks.
 * **Per-card control.** Photo, description, address, opening hours, phone and email each have a toggle. The store name always shows.
 * **Accessible by construction.** The result count goes through an ARIA live region, the search field is keyboard-operable, cards carry focus-visible outlines, and the storefront styles follow the visitor's light or dark preference and honour prefers-reduced-motion.
-* **Loads nothing it does not need.** The stylesheet and script are enqueued only on a page where the shortcode actually rendered, and the markup is written to avoid layout shift.
+* **Loads nothing it does not need.** The stylesheet and script are enqueued only on a page where the directory actually rendered, and the markup is written to avoid layout shift.
 * **Readable by an assistant.** On WordPress 6.9 and newer an AI assistant in wp-admin can list your locations, look one up and read the directory settings, through the WordPress Abilities API. Reading only: it cannot add or change anything.
 
 = What it does not do =
 
-There is no map view, no driving directions and no geolocation of the visitor, because all three need a paid map provider. If you need a pin on a map, this is not the plugin.
+There is no map view and no geolocation of the visitor. Directions are the link described above, worked out on openstreetmap.org rather than in your page. A map of your locations (those with coordinates) is part of the Lokilo Pro add-on, which draws it on free OpenStreetMap tiles with no key.
 
 It does not import in bulk. Locations are added one at a time in wp-admin.
 
@@ -43,7 +45,7 @@ It does not import in bulk. Locations are added one at a time in wp-admin.
 2. Activate it. WooCommerce must be active.
 3. Go to WooCommerce > Store Locations and add your stores.
 4. Configure WooCommerce > Lokilo (search box and visible fields).
-5. Add the `[lokilo]` shortcode to any page.
+5. Add the Store Locator block, or the `[lokilo]` shortcode, to any page.
 
 == Frequently Asked Questions ==
 
@@ -61,7 +63,7 @@ Yes. Lokilo registers under the WooCommerce menu and requires WooCommerce to be 
 
 = Does it show a map? =
 
-No. Lokilo renders a searchable list of cards, not a map, so it needs no map key or external service. You can still store latitude and longitude per location for use by an add-on.
+No. Lokilo renders a searchable list of cards, not a map, so it needs no map key or external service. Each card with an address links to directions on OpenStreetMap. You can still store latitude and longitude per location for use by an add-on.
 
 = Which details can I show on each card? =
 
@@ -69,11 +71,11 @@ The store name is always shown. You can toggle the store photo, the description,
 
 = How does the search box work? =
 
-The `[lokilo]` shortcode filters location cards client-side as the shopper types.
+The directory filters location cards in the browser as the shopper types, ignoring case and accents.
 
 = Can I add stores without custom code? =
 
-Yes. Add locations under **WooCommerce > Store Locations** and place `[lokilo]` on any page.
+Yes. Add locations under **WooCommerce > Store Locations** and place the Store Locator block or `[lokilo]` on any page.
 
 
 = Does this plugin work on WordPress Multisite? =
@@ -84,18 +86,30 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 
 1. The storefront directory: every location in the page, filtered as the visitor types.
 2. The settings screen: the search box, and which fields each card shows.
+3. Typing "lodz" finds the Łódź stores, each card with a Get directions link.
 
 == External Services ==
 
-Lokilo does not connect to any external service. It registers no remote API, sends no HTTP request, and loads no third-party script, font, map or tile. Your store data never leaves your site.
+Lokilo does not connect to any external service on its own. It registers no remote API, sends no HTTP request, and loads no third-party script, font, map or tile. Your store data stays on your site; the one exception is the directions link described below, and only when a visitor clicks it.
 
 Every location is stored on your own server as a `locator_store` post, with its address, city, postcode, country, phone, opening hours, email and any latitude/longitude kept in that post's meta. Settings live in the `locator_settings` option. Coordinates are typed in by hand on the location screen - nothing is geocoded against an outside provider. The storefront search filters cards in the visitor's browser, so no request is made while typing, and the plugin sends no email.
+
+**OpenStreetMap directions (link only).** Each store card with an address shows a Get directions link to `https://www.openstreetmap.org/directions`, with the store's address in the link. Nothing is loaded from or sent to OpenStreetMap when the page is shown. Only if a visitor clicks the link does their browser open openstreetmap.org in a new tab, which receives the store address and the usual request data (IP address, browser) under the OpenStreetMap Foundation [terms of use](https://osmfoundation.org/wiki/Terms_of_Use) and [privacy policy](https://osmfoundation.org/wiki/Privacy_Policy).
 
 == Translations ==
 
 Lokilo is fully translatable and ships the `lokilo.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.3.1 =
+
+* Fix: "Get directions" routes to the store coordinates when they are set, and drops street prefixes such as "ul." from the address otherwise, since OpenStreetMap finds nothing for them.
+
+= 1.3.0 =
+* Search ignores accents on both sides: "lodz" finds Łódź and "uberlingen" finds Überlingen, in the storefront box and in the list-stores ability.
+* Each store card with an address has a Get directions link that opens OpenStreetMap in a new tab. It is a plain link with no key and no script; nothing is sent until the visitor clicks it.
+* New Store Locator block. It renders the same directory as the `[lokilo]` shortcode.
 
 = 1.2.6 =
 * Search now matches store names, cities and addresses with non-ASCII capitals (Łódź, Überlingen). The storefront box and the list-stores ability lower-cased only A to Z, so these stores never matched.

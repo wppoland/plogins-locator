@@ -11,6 +11,7 @@ declare(strict_types=1);
 
 use Locator\Admin\Settings;
 use Locator\Admin\StoreListSearch;
+use Locator\Block\StoreLocatorBlock;
 use Locator\Container;
 use Locator\Migrator;
 use Locator\PostType\StoreLocation;
@@ -44,6 +45,11 @@ return static function (Container $c): void {
         $c->get(StoreRepository::class),
         $c->get(TemplateLoader::class),
         $c->get(Settings::class),
+    ));
+
+    // Store Locator block: renders through the same service as the shortcode.
+    $c->singleton(StoreLocatorBlock::class, static fn (): StoreLocatorBlock => new StoreLocatorBlock(
+        $c->get(Locator::class),
     ));
 
     // Abilities API surface (WP 6.9+). Read only: it goes through the same

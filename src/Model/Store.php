@@ -30,7 +30,7 @@ final class Store
     }
 
     /**
-     * A single, lower-cased haystack used for client-side text filtering.
+     * A single, folded haystack used for client-side text filtering.
      */
     public function searchHaystack(): string
     {
@@ -42,7 +42,7 @@ final class Store
             $this->country,
         ];
 
-        return self::lower(trim(implode(' ', array_filter($parts))));
+        return self::fold(trim(implode(' ', array_filter($parts))));
     }
 
     /**
@@ -52,5 +52,16 @@ final class Store
     public static function lower(string $text): string
     {
         return function_exists('mb_strtolower') ? mb_strtolower($text, 'UTF-8') : strtolower($text);
+    }
+
+    /**
+     * Lower-case and strip accents, so "lodz" finds "Łódź". The locale is pinned:
+     * on a de_DE or da_DK site remove_accents() would turn "ü" into "ue" and "ø"
+     * into "oe", which the browser-side fold in locator.js cannot know about.
+     * "ß" becomes "ss" first, because that is how a visitor types it.
+     */
+    public static function fold(string $text): string
+    {
+        return remove_accents(str_replace('ß', 'ss', self::lower($text)), 'en_US');
     }
 }

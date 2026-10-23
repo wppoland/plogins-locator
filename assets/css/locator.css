@@ -269,13 +269,21 @@
   font-size: 0.925rem;
 }
 
-.locator__contact a {
+.locator__contact a,
+.locator__directions {
   color: var(--locator-accent);
   text-decoration: none;
 }
 
+.locator__directions {
+  display: inline-block;
+  font-size: 0.925rem;
+}
+
 .locator__contact a:hover,
-.locator__contact a:focus-visible {
+.locator__contact a:focus-visible,
+.locator__directions:hover,
+.locator__directions:focus-visible {
   text-decoration: underline;
 }
 

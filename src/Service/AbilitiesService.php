@@ -100,7 +100,7 @@ final class AbilitiesService implements HasHooks
             'execute_callback' => function (array $input): array {
                 $limit  = isset($input['limit']) ? (int) $input['limit'] : 100;
                 $limit  = max(1, min(500, $limit));
-                $search = isset($input['search']) ? Store::lower(trim(sanitize_text_field((string) $input['search']))) : '';
+                $search = isset($input['search']) ? Store::fold(trim(sanitize_text_field((string) $input['search']))) : '';
 
                 if ('' === $search) {
                     $stores = $this->repository->all($limit);

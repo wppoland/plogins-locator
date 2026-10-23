@@ -16,6 +16,21 @@
     }
   }
 
+  // Letters NFD does not split into base + accent. Mirrors the rows of WordPress
+  // remove_accents() that Store::fold() applies to the haystack, so the query
+  // and the haystack fold the same way ("lodz" finds "Łódź").
+  var FOLD_MAP = { 'ł': 'l', 'ß': 'ss', 'ø': 'o', 'æ': 'ae', 'œ': 'oe', 'đ': 'd', 'ð': 'd', 'þ': 'th', 'ı': 'i', 'ħ': 'h' };
+
+  function fold(text) {
+    return text
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/\p{Diacritic}/gu, '')
+      .replace(/[łßøæœđðþıħ]/g, function (c) {
+        return FOLD_MAP[c];
+      });
+  }
+
   function setupLocator(root) {
     var input = root.querySelector('[data-locator-search]');
     var items = Array.prototype.slice.call(root.querySelectorAll('[data-locator-item]'));
@@ -53,7 +68,7 @@
     }
 
     function filter() {
-      var query = input.value.trim().toLowerCase();
+      var query = fold(input.value.trim());
       var visible = 0;
 
       items.forEach(function (item) {

@@ -107,6 +107,7 @@ namespace {
     function esc_url($url) { return (string) $url; }
     function wp_kses_post($text) { return (string) $text; }
     function wpautop(string $text): string { return $text; }
+    function remove_accents(string $text, string $locale = ''): string { return $text; }
     function is_email($email) { return false; }
     function esc_html_e(string $text, string $domain = ''): void { echo $text; }
     function esc_attr_e(string $text, string $domain = ''): void { echo $text; }

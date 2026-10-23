@@ -1,0 +1,16 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "lokilo/store-locator",
+    "title": "Store Locator",
+    "category": "woocommerce",
+    "icon": "location",
+    "description": "Show your store locations as a searchable list (the same directory as the [lokilo] shortcode).",
+    "keywords": ["store locator", "stores", "locations", "lokilo"],
+    "textdomain": "lokilo",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "editorScript": "file:./editor.js"
+}

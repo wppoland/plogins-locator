@@ -15,6 +15,7 @@ declare(strict_types=1);
 
 use Locator\Admin\Settings;
 use Locator\Admin\StoreListSearch;
+use Locator\Block\StoreLocatorBlock;
 use Locator\PostType\StoreLocation;
 use Locator\Service\AbilitiesService;
 use Locator\Service\Locator;
@@ -29,10 +30,12 @@ return is_admin()
         Settings::class,
         StoreListSearch::class,
         Locator::class,
+        StoreLocatorBlock::class,
         AbilitiesService::class,
     ]
     : [
         StoreLocation::class,
         Locator::class,
+        StoreLocatorBlock::class,
         AbilitiesService::class,
     ];
